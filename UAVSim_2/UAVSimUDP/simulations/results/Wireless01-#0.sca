@@ -1,0 +1,2734 @@
+version 2
+run Wireless01-0-20200219-09:02:37-3200
+attr configname Wireless01
+attr datetime 20200219-09:02:37
+attr experiment Wireless01
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Single
+attr processid 3200
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param *.host*.networkLayer.arpType "\"GlobalARP\""
+param *.host*.wlan[0].typename "\"WirelessNic\""
+param *.host*.wlan[0].radioType "\"IdealRadio\""
+param *.host*.wlan[0].macType "\"CsmaCaMac\""
+param *.host*.wlan[0].mac.useAck false
+param *.host*.wlan[0].mac.maxQueueSize 5000
+param *.hostB*.wlan[0].radio.carrierFrequency 1.5GHz
+param *.host*.wlan[0].radio.carrierFrequency .9GHz
+param *.host*.udpApp[*].packetName "\"UDPData\""
+param *.host*.numUdpApps 3
+param *.host*.mobilityType "\"LinearMobility\""
+param *.host*.mobility.speed 12mps
+param *.host*.mobility.angle 270deg
+param *.hostA.udpApp[*].typename "\"UDPBasicApp\""
+param *.hostA.udpApp[*].destAddresses "\"hostB1\""
+param *.hostA.udpApp[0].destPort 5554
+param *.hostA.udpApp[1].destPort 5555
+param *.hostA.udpApp[2].destPort 5556
+param *.hostA.udpApp[*].sendInterval .1s
+param *.hostA.udpApp[*].messageLength 1300B
+param *.hostB*.udpApp[*].typename "\"UDPSink\""
+param *.hostB*.udpApp[0].localPort 5
+param *.hostB*.udpApp[1].localPort 55
+param *.hostB*.udpApp[2].localPort 5556
+param *.hostC.udpApp[*].typename "\"UDPBasicApp\""
+param *.hostC.udpApp[*].destAddresses "\"hostB1\""
+param *.hostC.udpApp[0].destPort 5554
+param *.hostC.udpApp[1].destPort 5555
+param *.hostC.udpApp[2].destPort 5556
+param *.hostC.udpApp[*].messageLength 100B
+param *.hostC.udpApp[*].sendInterval .1s
+param *.hostD.udpApp[*].typename "\"UDPBasicApp\""
+param *.hostD.udpApp[*].destAddresses "\"hostB1\""
+param *.hostD.udpApp[0].destPort 5554
+param *.hostD.udpApp[1].destPort 5555
+param *.hostD.udpApp[2].destPort 5556
+param *.hostD.udpApp[*].messageLength 100B
+param *.hostD.udpApp[*].sendInterval .1s
+param *.hostE.udpApp[*].typename "\"UDPBasicApp\""
+param *.hostE.udpApp[*].destAddresses "\"hostB1\""
+param *.hostE.udpApp[0].destPort 5554
+param *.hostE.udpApp[1].destPort 5555
+param *.hostE.udpApp[2].destPort 5556
+param *.hostE.udpApp[*].messageLength 100B
+param *.hostE.udpApp[*].sendInterval .1s
+param *.hostF.udpApp[*].typename "\"UDPBasicApp\""
+param *.hostF.udpApp[*].destAddresses "\"hostB1\""
+param *.hostF.udpApp[0].destPort 5554
+param *.hostF.udpApp[1].destPort 5555
+param *.hostF.udpApp[2].destPort 5556
+param *.hostF.udpApp[*].messageLength 100B
+param *.hostF.udpApp[*].sendInterval .01s
+param *.hostG.udpApp[*].typename "\"UDPBasicApp\""
+param *.hostG.udpApp[*].destAddresses "\"hostB1\""
+param *.hostG.udpApp[0].destPort 5554
+param *.hostG.udpApp[1].destPort 5556
+param *.hostG.udpApp[2].destPort 5556
+param *.hostG.udpApp[*].messageLength 100B
+param *.hostG.udpApp[*].sendInterval .01s
+param *.hostH.udpApp[*].typename "\"UDPBasicApp\""
+param *.hostH.udpApp[*].destAddresses "\"hostB1\""
+param *.hostH.udpApp[0].destPort 5554
+param *.hostH.udpApp[1].destPort 5556
+param *.hostH.udpApp[2].destPort 5556
+param *.hostH.udpApp[*].messageLength 100B
+param *.hostH.udpApp[*].sendInterval .01s
+param *.hostI.udpApp[*].typename "\"UDPBasicApp\""
+param *.hostI.udpApp[*].destAddresses "\"hostB1\""
+param *.hostI.udpApp[0].destPort 5554
+param *.hostI.udpApp[1].destPort 5556
+param *.hostI.udpApp[2].destPort 5556
+param *.hostI.udpApp[*].messageLength 100B
+param *.hostI.udpApp[*].sendInterval .01s
+param *.hostQ.udpApp[*].typename "\"UDPBasicApp\""
+param *.hostQ.udpApp[*].destAddresses "\"hostB1\""
+param *.hostQ.udpApp[0].destPort 5554
+param *.hostQ.udpApp[1].destPort 5555
+param *.hostQ.udpApp[2].destPort 5556
+param *.hostQ.udpApp[*].messageLength 100B
+param *.hostQ.udpApp[*].sendInterval .01s
+param *.host*.wlan[0].radio.transmitter.communicationRange 300m
+param *.host*.wlan[0].radio.receiver.ignoreInterference true
+param *.host*.**.bitrate 2Mbps
+
+scalar Single.radioMedium.propagation "Arrival computation count" 4932
+scalar Single.radioMedium "transmission count" 548
+scalar Single.radioMedium "radio frame send count" 4932
+scalar Single.radioMedium "reception computation count" 4932
+scalar Single.radioMedium "interference computation count" 11178
+scalar Single.radioMedium "reception decision computation count" 1132
+scalar Single.radioMedium "listening decision computation count" 5717
+scalar Single.radioMedium "reception cache hit" 84.148614771485
+attr unit %
+scalar Single.radioMedium "interference cache hit" 66.666666666667
+attr unit %
+scalar Single.radioMedium "noise cache hit" 0
+attr unit %
+scalar Single.radioMedium "snir cache hit" 50
+attr unit %
+scalar Single.radioMedium "reception decision cache hit" 50
+attr unit %
+scalar Single.radioMedium "reception result cache hit" 0
+attr unit %
+scalar Single.hostA.lo0.lo droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar Single.hostA.lo0.lo droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar Single.hostA.lo0.lo rcvdPkFromHL:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar Single.hostA.lo0.lo rcvdPkFromHL:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar Single.hostA.lo0.lo passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar Single.hostA.lo0.lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar Single.hostA.wlan[0].mac numRetry 0
+scalar Single.hostA.wlan[0].mac numSentWithoutRetry 0
+scalar Single.hostA.wlan[0].mac numGivenUp 0
+scalar Single.hostA.wlan[0].mac numCollision 0
+scalar Single.hostA.wlan[0].mac numSent 9
+scalar Single.hostA.wlan[0].mac numReceived 4
+scalar Single.hostA.wlan[0].mac numSentBroadcast 0
+scalar Single.hostA.wlan[0].mac numReceivedBroadcast 0
+scalar Single.hostA.wlan[0].radio transmissionState:count 36
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, count"
+scalar Single.hostA.wlan[0].radio receptionState:count 117
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, count"
+scalar Single.hostA.wlan[0].radio radioMode:count 20
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, count"
+statistic Single.hostA.wlan[0].radio symbolErrorRate:histogram
+field count 49
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr source symbolErrorRate
+attr title "Symbol error rate, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	49
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+statistic Single.hostA.wlan[0].radio bitErrorRate:histogram
+field count 49
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr source bitErrorRate
+attr title "Bit error rate, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	49
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+statistic Single.hostA.wlan[0].radio packetErrorRate:histogram
+field count 49
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr source packetErrorRate
+attr title "Packet error rate, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	49
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+statistic Single.hostA.wlan[0].radio minSNIR:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr source minSNIR
+attr title "Min SNIR, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Single.hostA.udpApp[0] "packets sent" 3
+scalar Single.hostA.udpApp[0] "packets received" 0
+scalar Single.hostA.udpApp[0] rcvdPk:count 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, count"
+scalar Single.hostA.udpApp[0] rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, sum(packetBytes)"
+statistic Single.hostA.udpApp[0] rcvdPkLifetime:stats
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rcvdPk)
+attr title "received packet lifetime, stats"
+attr unit s
+scalar Single.hostA.udpApp[0] sentPk:count 3
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, count"
+scalar Single.hostA.udpApp[0] sentPk:sum(packetBytes) 3900
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, sum(packetBytes)"
+scalar Single.hostA.udpApp[1] "packets sent" 3
+scalar Single.hostA.udpApp[1] "packets received" 0
+scalar Single.hostA.udpApp[1] rcvdPk:count 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, count"
+scalar Single.hostA.udpApp[1] rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, sum(packetBytes)"
+statistic Single.hostA.udpApp[1] rcvdPkLifetime:stats
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rcvdPk)
+attr title "received packet lifetime, stats"
+attr unit s
+scalar Single.hostA.udpApp[1] sentPk:count 3
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, count"
+scalar Single.hostA.udpApp[1] sentPk:sum(packetBytes) 3900
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, sum(packetBytes)"
+scalar Single.hostA.udpApp[2] "packets sent" 3
+scalar Single.hostA.udpApp[2] "packets received" 0
+scalar Single.hostA.udpApp[2] rcvdPk:count 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, count"
+scalar Single.hostA.udpApp[2] rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, sum(packetBytes)"
+statistic Single.hostA.udpApp[2] rcvdPkLifetime:stats
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rcvdPk)
+attr title "received packet lifetime, stats"
+attr unit s
+scalar Single.hostA.udpApp[2] sentPk:count 3
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, count"
+scalar Single.hostA.udpApp[2] sentPk:sum(packetBytes) 3900
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, sum(packetBytes)"
+scalar Single.hostA.udp droppedPkBadChecksum:count 0
+attr interpolationmode none
+attr title "packets dropped (checksum error), count"
+scalar Single.hostA.udp droppedPkWrongPort:count 0
+attr interpolationmode none
+attr title "packets dropped (wrong port), count"
+scalar Single.hostA.udp passedUpPk:count 0
+attr interpolationmode none
+attr title "packets passed up, count"
+scalar Single.hostA.udp rcvdPk:count 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, count"
+scalar Single.hostA.udp rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, sum(packetBytes)"
+scalar Single.hostA.udp sentPk:count 9
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, count"
+scalar Single.hostA.udp sentPk:sum(packetBytes) 11772
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, sum(packetBytes)"
+scalar Single.hostB1.lo0.lo droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar Single.hostB1.lo0.lo droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar Single.hostB1.lo0.lo rcvdPkFromHL:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar Single.hostB1.lo0.lo rcvdPkFromHL:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar Single.hostB1.lo0.lo passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar Single.hostB1.lo0.lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar Single.hostB1.wlan[0].mac numRetry 0
+scalar Single.hostB1.wlan[0].mac numSentWithoutRetry 0
+scalar Single.hostB1.wlan[0].mac numGivenUp 0
+scalar Single.hostB1.wlan[0].mac numCollision 0
+scalar Single.hostB1.wlan[0].mac numSent 23
+scalar Single.hostB1.wlan[0].mac numReceived 35
+scalar Single.hostB1.wlan[0].mac numSentBroadcast 0
+scalar Single.hostB1.wlan[0].mac numReceivedBroadcast 0
+scalar Single.hostB1.wlan[0].radio transmissionState:count 92
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, count"
+scalar Single.hostB1.wlan[0].radio receptionState:count 118
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, count"
+scalar Single.hostB1.wlan[0].radio radioMode:count 48
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, count"
+statistic Single.hostB1.wlan[0].radio symbolErrorRate:histogram
+field count 35
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr source symbolErrorRate
+attr title "Symbol error rate, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	35
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+statistic Single.hostB1.wlan[0].radio bitErrorRate:histogram
+field count 35
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr source bitErrorRate
+attr title "Bit error rate, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	35
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+statistic Single.hostB1.wlan[0].radio packetErrorRate:histogram
+field count 35
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr source packetErrorRate
+attr title "Packet error rate, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	35
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+statistic Single.hostB1.wlan[0].radio minSNIR:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr source minSNIR
+attr title "Min SNIR, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Single.hostB1.udpApp[0] rcvdPk:count 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, count"
+scalar Single.hostB1.udpApp[0] rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, sum(packetBytes)"
+statistic Single.hostB1.udpApp[0] endToEndDelay:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rcvdPk)
+attr title "end-to-end delay, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Single.hostB1.udpApp[1] rcvdPk:count 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, count"
+scalar Single.hostB1.udpApp[1] rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, sum(packetBytes)"
+statistic Single.hostB1.udpApp[1] endToEndDelay:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rcvdPk)
+attr title "end-to-end delay, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Single.hostB1.udpApp[2] rcvdPk:count 12
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, count"
+scalar Single.hostB1.udpApp[2] rcvdPk:sum(packetBytes) 4800
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, sum(packetBytes)"
+statistic Single.hostB1.udpApp[2] endToEndDelay:histogram
+field count 12
+field mean 0.019906191561583
+field stddev 0.0064371953320222
+field min 0.002557882014
+field max 0.02591100635
+field sum 0.238874298739
+field sqrsum 0.0052108898710061
+attr interpolationmode none
+attr source messageAge(rcvdPk)
+attr title "end-to-end delay, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	0.0005	0
+bin	0.001	0
+bin	0.0015	0
+bin	0.002	0
+bin	0.0025	1
+bin	0.003	0
+bin	0.0035	0
+bin	0.004	0
+bin	0.0045	0
+bin	0.005	0
+bin	0.0055	0
+bin	0.006	0
+bin	0.0065	0
+bin	0.007	0
+bin	0.0075	0
+bin	0.008	0
+bin	0.0085	0
+bin	0.009	0
+bin	0.0095	0
+bin	0.01	0
+bin	0.0105	0
+bin	0.011	0
+bin	0.0115	0
+bin	0.012	0
+bin	0.0125	0
+bin	0.013	0
+bin	0.0135	0
+bin	0.014	0
+bin	0.0145	0
+bin	0.015	0
+bin	0.0155	0
+bin	0.016	2
+bin	0.0165	0
+bin	0.017	0
+bin	0.0175	0
+bin	0.018	1
+bin	0.0185	1
+bin	0.019	0
+bin	0.0195	0
+bin	0.02	0
+bin	0.0205	1
+bin	0.021	0
+bin	0.0215	0
+bin	0.022	1
+bin	0.0225	0
+bin	0.023	1
+bin	0.0235	1
+bin	0.024	0
+bin	0.0245	1
+bin	0.025	0
+bin	0.0255	2
+bin	0.026	0
+bin	0.0265	0
+bin	0.027	0
+bin	0.0275	0
+bin	0.028	0
+bin	0.0285	0
+bin	0.029	0
+bin	0.0295	0
+bin	0.03	0
+bin	0.0305	0
+bin	0.031	0
+bin	0.0315	0
+bin	0.032	0
+scalar Single.hostB1.udp droppedPkBadChecksum:count 0
+attr interpolationmode none
+attr title "packets dropped (checksum error), count"
+scalar Single.hostB1.udp droppedPkWrongPort:count 23
+attr interpolationmode none
+attr title "packets dropped (wrong port), count"
+scalar Single.hostB1.udp passedUpPk:count 12
+attr interpolationmode none
+attr title "packets passed up, count"
+scalar Single.hostB1.udp rcvdPk:count 35
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, count"
+scalar Single.hostB1.udp rcvdPk:sum(packetBytes) 13380
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, sum(packetBytes)"
+scalar Single.hostB1.udp sentPk:count 0
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, count"
+scalar Single.hostB1.udp sentPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, sum(packetBytes)"
+scalar Single.hostC.lo0.lo droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar Single.hostC.lo0.lo droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar Single.hostC.lo0.lo rcvdPkFromHL:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar Single.hostC.lo0.lo rcvdPkFromHL:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar Single.hostC.lo0.lo passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar Single.hostC.lo0.lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar Single.hostC.wlan[0].mac numRetry 0
+scalar Single.hostC.wlan[0].mac numSentWithoutRetry 0
+scalar Single.hostC.wlan[0].mac numGivenUp 0
+scalar Single.hostC.wlan[0].mac numCollision 0
+scalar Single.hostC.wlan[0].mac numSent 9
+scalar Single.hostC.wlan[0].mac numReceived 5
+scalar Single.hostC.wlan[0].mac numSentBroadcast 0
+scalar Single.hostC.wlan[0].mac numReceivedBroadcast 0
+scalar Single.hostC.wlan[0].radio transmissionState:count 36
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, count"
+scalar Single.hostC.wlan[0].radio receptionState:count 257
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, count"
+scalar Single.hostC.wlan[0].radio radioMode:count 20
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, count"
+statistic Single.hostC.wlan[0].radio symbolErrorRate:histogram
+field count 115
+field mean 0.16521739130435
+field stddev 0.37300192329613
+field min 0
+field max 1
+field sum 19
+field sqrsum 19
+attr source symbolErrorRate
+attr title "Symbol error rate, histogram"
+bin	-inf	0
+bin	0	96
+bin	1	19
+bin	2	0
+statistic Single.hostC.wlan[0].radio bitErrorRate:histogram
+field count 115
+field mean 0.16521739130435
+field stddev 0.37300192329613
+field min 0
+field max 1
+field sum 19
+field sqrsum 19
+attr source bitErrorRate
+attr title "Bit error rate, histogram"
+bin	-inf	0
+bin	0	96
+bin	1	19
+bin	2	0
+statistic Single.hostC.wlan[0].radio packetErrorRate:histogram
+field count 115
+field mean 0.16521739130435
+field stddev 0.37300192329613
+field min 0
+field max 1
+field sum 19
+field sqrsum 19
+attr source packetErrorRate
+attr title "Packet error rate, histogram"
+bin	-inf	0
+bin	0	96
+bin	1	19
+bin	2	0
+statistic Single.hostC.wlan[0].radio minSNIR:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr source minSNIR
+attr title "Min SNIR, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Single.hostC.udpApp[0] "packets sent" 3
+scalar Single.hostC.udpApp[0] "packets received" 0
+scalar Single.hostC.udpApp[0] rcvdPk:count 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, count"
+scalar Single.hostC.udpApp[0] rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, sum(packetBytes)"
+statistic Single.hostC.udpApp[0] rcvdPkLifetime:stats
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rcvdPk)
+attr title "received packet lifetime, stats"
+attr unit s
+scalar Single.hostC.udpApp[0] sentPk:count 3
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, count"
+scalar Single.hostC.udpApp[0] sentPk:sum(packetBytes) 300
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, sum(packetBytes)"
+scalar Single.hostC.udpApp[1] "packets sent" 3
+scalar Single.hostC.udpApp[1] "packets received" 0
+scalar Single.hostC.udpApp[1] rcvdPk:count 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, count"
+scalar Single.hostC.udpApp[1] rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, sum(packetBytes)"
+statistic Single.hostC.udpApp[1] rcvdPkLifetime:stats
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rcvdPk)
+attr title "received packet lifetime, stats"
+attr unit s
+scalar Single.hostC.udpApp[1] sentPk:count 3
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, count"
+scalar Single.hostC.udpApp[1] sentPk:sum(packetBytes) 300
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, sum(packetBytes)"
+scalar Single.hostC.udpApp[2] "packets sent" 3
+scalar Single.hostC.udpApp[2] "packets received" 0
+scalar Single.hostC.udpApp[2] rcvdPk:count 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, count"
+scalar Single.hostC.udpApp[2] rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, sum(packetBytes)"
+statistic Single.hostC.udpApp[2] rcvdPkLifetime:stats
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rcvdPk)
+attr title "received packet lifetime, stats"
+attr unit s
+scalar Single.hostC.udpApp[2] sentPk:count 3
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, count"
+scalar Single.hostC.udpApp[2] sentPk:sum(packetBytes) 300
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, sum(packetBytes)"
+scalar Single.hostC.udp droppedPkBadChecksum:count 0
+attr interpolationmode none
+attr title "packets dropped (checksum error), count"
+scalar Single.hostC.udp droppedPkWrongPort:count 0
+attr interpolationmode none
+attr title "packets dropped (wrong port), count"
+scalar Single.hostC.udp passedUpPk:count 0
+attr interpolationmode none
+attr title "packets passed up, count"
+scalar Single.hostC.udp rcvdPk:count 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, count"
+scalar Single.hostC.udp rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, sum(packetBytes)"
+scalar Single.hostC.udp sentPk:count 9
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, count"
+scalar Single.hostC.udp sentPk:sum(packetBytes) 972
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, sum(packetBytes)"
+scalar Single.hostD.lo0.lo droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar Single.hostD.lo0.lo droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar Single.hostD.lo0.lo rcvdPkFromHL:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar Single.hostD.lo0.lo rcvdPkFromHL:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar Single.hostD.lo0.lo passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar Single.hostD.lo0.lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar Single.hostD.wlan[0].mac numRetry 0
+scalar Single.hostD.wlan[0].mac numSentWithoutRetry 0
+scalar Single.hostD.wlan[0].mac numGivenUp 0
+scalar Single.hostD.wlan[0].mac numCollision 0
+scalar Single.hostD.wlan[0].mac numSent 9
+scalar Single.hostD.wlan[0].mac numReceived 4
+scalar Single.hostD.wlan[0].mac numSentBroadcast 0
+scalar Single.hostD.wlan[0].mac numReceivedBroadcast 0
+scalar Single.hostD.wlan[0].radio transmissionState:count 36
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, count"
+scalar Single.hostD.wlan[0].radio receptionState:count 429
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, count"
+scalar Single.hostD.wlan[0].radio radioMode:count 20
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, count"
+statistic Single.hostD.wlan[0].radio symbolErrorRate:histogram
+field count 200
+field mean 0.175
+field stddev 0.38092059869816
+field min 0
+field max 1
+field sum 35
+field sqrsum 35
+attr source symbolErrorRate
+attr title "Symbol error rate, histogram"
+bin	-inf	0
+bin	0	165
+bin	1	35
+bin	2	0
+statistic Single.hostD.wlan[0].radio bitErrorRate:histogram
+field count 200
+field mean 0.175
+field stddev 0.38092059869816
+field min 0
+field max 1
+field sum 35
+field sqrsum 35
+attr source bitErrorRate
+attr title "Bit error rate, histogram"
+bin	-inf	0
+bin	0	165
+bin	1	35
+bin	2	0
+statistic Single.hostD.wlan[0].radio packetErrorRate:histogram
+field count 200
+field mean 0.175
+field stddev 0.38092059869816
+field min 0
+field max 1
+field sum 35
+field sqrsum 35
+attr source packetErrorRate
+attr title "Packet error rate, histogram"
+bin	-inf	0
+bin	0	165
+bin	1	35
+bin	2	0
+statistic Single.hostD.wlan[0].radio minSNIR:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr source minSNIR
+attr title "Min SNIR, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Single.hostD.udpApp[0] "packets sent" 3
+scalar Single.hostD.udpApp[0] "packets received" 0
+scalar Single.hostD.udpApp[0] rcvdPk:count 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, count"
+scalar Single.hostD.udpApp[0] rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, sum(packetBytes)"
+statistic Single.hostD.udpApp[0] rcvdPkLifetime:stats
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rcvdPk)
+attr title "received packet lifetime, stats"
+attr unit s
+scalar Single.hostD.udpApp[0] sentPk:count 3
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, count"
+scalar Single.hostD.udpApp[0] sentPk:sum(packetBytes) 300
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, sum(packetBytes)"
+scalar Single.hostD.udpApp[1] "packets sent" 3
+scalar Single.hostD.udpApp[1] "packets received" 0
+scalar Single.hostD.udpApp[1] rcvdPk:count 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, count"
+scalar Single.hostD.udpApp[1] rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, sum(packetBytes)"
+statistic Single.hostD.udpApp[1] rcvdPkLifetime:stats
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rcvdPk)
+attr title "received packet lifetime, stats"
+attr unit s
+scalar Single.hostD.udpApp[1] sentPk:count 3
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, count"
+scalar Single.hostD.udpApp[1] sentPk:sum(packetBytes) 300
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, sum(packetBytes)"
+scalar Single.hostD.udpApp[2] "packets sent" 3
+scalar Single.hostD.udpApp[2] "packets received" 0
+scalar Single.hostD.udpApp[2] rcvdPk:count 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, count"
+scalar Single.hostD.udpApp[2] rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, sum(packetBytes)"
+statistic Single.hostD.udpApp[2] rcvdPkLifetime:stats
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rcvdPk)
+attr title "received packet lifetime, stats"
+attr unit s
+scalar Single.hostD.udpApp[2] sentPk:count 3
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, count"
+scalar Single.hostD.udpApp[2] sentPk:sum(packetBytes) 300
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, sum(packetBytes)"
+scalar Single.hostD.udp droppedPkBadChecksum:count 0
+attr interpolationmode none
+attr title "packets dropped (checksum error), count"
+scalar Single.hostD.udp droppedPkWrongPort:count 0
+attr interpolationmode none
+attr title "packets dropped (wrong port), count"
+scalar Single.hostD.udp passedUpPk:count 0
+attr interpolationmode none
+attr title "packets passed up, count"
+scalar Single.hostD.udp rcvdPk:count 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, count"
+scalar Single.hostD.udp rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, sum(packetBytes)"
+scalar Single.hostD.udp sentPk:count 9
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, count"
+scalar Single.hostD.udp sentPk:sum(packetBytes) 972
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, sum(packetBytes)"
+scalar Single.hostE.lo0.lo droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar Single.hostE.lo0.lo droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar Single.hostE.lo0.lo rcvdPkFromHL:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar Single.hostE.lo0.lo rcvdPkFromHL:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar Single.hostE.lo0.lo passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar Single.hostE.lo0.lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar Single.hostE.wlan[0].mac numRetry 0
+scalar Single.hostE.wlan[0].mac numSentWithoutRetry 0
+scalar Single.hostE.wlan[0].mac numGivenUp 0
+scalar Single.hostE.wlan[0].mac numCollision 0
+scalar Single.hostE.wlan[0].mac numSent 9
+scalar Single.hostE.wlan[0].mac numReceived 1
+scalar Single.hostE.wlan[0].mac numSentBroadcast 0
+scalar Single.hostE.wlan[0].mac numReceivedBroadcast 0
+scalar Single.hostE.wlan[0].radio transmissionState:count 36
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, count"
+scalar Single.hostE.wlan[0].radio receptionState:count 341
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, count"
+scalar Single.hostE.wlan[0].radio radioMode:count 20
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, count"
+statistic Single.hostE.wlan[0].radio symbolErrorRate:histogram
+field count 139
+field mean 0.61151079136691
+field stddev 0.48916953237548
+field min 0
+field max 1
+field sum 85
+field sqrsum 85
+attr source symbolErrorRate
+attr title "Symbol error rate, histogram"
+bin	-inf	0
+bin	0	54
+bin	1	85
+bin	2	0
+statistic Single.hostE.wlan[0].radio bitErrorRate:histogram
+field count 139
+field mean 0.61151079136691
+field stddev 0.48916953237548
+field min 0
+field max 1
+field sum 85
+field sqrsum 85
+attr source bitErrorRate
+attr title "Bit error rate, histogram"
+bin	-inf	0
+bin	0	54
+bin	1	85
+bin	2	0
+statistic Single.hostE.wlan[0].radio packetErrorRate:histogram
+field count 139
+field mean 0.61151079136691
+field stddev 0.48916953237548
+field min 0
+field max 1
+field sum 85
+field sqrsum 85
+attr source packetErrorRate
+attr title "Packet error rate, histogram"
+bin	-inf	0
+bin	0	54
+bin	1	85
+bin	2	0
+statistic Single.hostE.wlan[0].radio minSNIR:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr source minSNIR
+attr title "Min SNIR, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Single.hostE.udpApp[0] "packets sent" 3
+scalar Single.hostE.udpApp[0] "packets received" 0
+scalar Single.hostE.udpApp[0] rcvdPk:count 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, count"
+scalar Single.hostE.udpApp[0] rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, sum(packetBytes)"
+statistic Single.hostE.udpApp[0] rcvdPkLifetime:stats
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rcvdPk)
+attr title "received packet lifetime, stats"
+attr unit s
+scalar Single.hostE.udpApp[0] sentPk:count 3
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, count"
+scalar Single.hostE.udpApp[0] sentPk:sum(packetBytes) 300
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, sum(packetBytes)"
+scalar Single.hostE.udpApp[1] "packets sent" 3
+scalar Single.hostE.udpApp[1] "packets received" 0
+scalar Single.hostE.udpApp[1] rcvdPk:count 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, count"
+scalar Single.hostE.udpApp[1] rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, sum(packetBytes)"
+statistic Single.hostE.udpApp[1] rcvdPkLifetime:stats
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rcvdPk)
+attr title "received packet lifetime, stats"
+attr unit s
+scalar Single.hostE.udpApp[1] sentPk:count 3
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, count"
+scalar Single.hostE.udpApp[1] sentPk:sum(packetBytes) 300
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, sum(packetBytes)"
+scalar Single.hostE.udpApp[2] "packets sent" 3
+scalar Single.hostE.udpApp[2] "packets received" 0
+scalar Single.hostE.udpApp[2] rcvdPk:count 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, count"
+scalar Single.hostE.udpApp[2] rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, sum(packetBytes)"
+statistic Single.hostE.udpApp[2] rcvdPkLifetime:stats
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rcvdPk)
+attr title "received packet lifetime, stats"
+attr unit s
+scalar Single.hostE.udpApp[2] sentPk:count 3
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, count"
+scalar Single.hostE.udpApp[2] sentPk:sum(packetBytes) 300
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, sum(packetBytes)"
+scalar Single.hostE.udp droppedPkBadChecksum:count 0
+attr interpolationmode none
+attr title "packets dropped (checksum error), count"
+scalar Single.hostE.udp droppedPkWrongPort:count 0
+attr interpolationmode none
+attr title "packets dropped (wrong port), count"
+scalar Single.hostE.udp passedUpPk:count 0
+attr interpolationmode none
+attr title "packets passed up, count"
+scalar Single.hostE.udp rcvdPk:count 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, count"
+scalar Single.hostE.udp rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, sum(packetBytes)"
+scalar Single.hostE.udp sentPk:count 9
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, count"
+scalar Single.hostE.udp sentPk:sum(packetBytes) 972
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, sum(packetBytes)"
+scalar Single.hostF.lo0.lo droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar Single.hostF.lo0.lo droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar Single.hostF.lo0.lo rcvdPkFromHL:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar Single.hostF.lo0.lo rcvdPkFromHL:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar Single.hostF.lo0.lo passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar Single.hostF.lo0.lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar Single.hostF.wlan[0].mac numRetry 0
+scalar Single.hostF.wlan[0].mac numSentWithoutRetry 0
+scalar Single.hostF.wlan[0].mac numGivenUp 0
+scalar Single.hostF.wlan[0].mac numCollision 0
+scalar Single.hostF.wlan[0].mac numSent 96
+scalar Single.hostF.wlan[0].mac numReceived 0
+scalar Single.hostF.wlan[0].mac numSentBroadcast 0
+scalar Single.hostF.wlan[0].mac numReceivedBroadcast 0
+scalar Single.hostF.wlan[0].radio transmissionState:count 386
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, count"
+scalar Single.hostF.wlan[0].radio receptionState:count 522
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, count"
+scalar Single.hostF.wlan[0].radio radioMode:count 195
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, count"
+statistic Single.hostF.wlan[0].radio symbolErrorRate:histogram
+field count 140
+field mean 0.57142857142857
+field stddev 0.49664858300929
+field min 0
+field max 1
+field sum 80
+field sqrsum 80
+attr source symbolErrorRate
+attr title "Symbol error rate, histogram"
+bin	-inf	0
+bin	0	60
+bin	1	80
+bin	2	0
+statistic Single.hostF.wlan[0].radio bitErrorRate:histogram
+field count 140
+field mean 0.57142857142857
+field stddev 0.49664858300929
+field min 0
+field max 1
+field sum 80
+field sqrsum 80
+attr source bitErrorRate
+attr title "Bit error rate, histogram"
+bin	-inf	0
+bin	0	60
+bin	1	80
+bin	2	0
+statistic Single.hostF.wlan[0].radio packetErrorRate:histogram
+field count 140
+field mean 0.57142857142857
+field stddev 0.49664858300929
+field min 0
+field max 1
+field sum 80
+field sqrsum 80
+attr source packetErrorRate
+attr title "Packet error rate, histogram"
+bin	-inf	0
+bin	0	60
+bin	1	80
+bin	2	0
+statistic Single.hostF.wlan[0].radio minSNIR:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr source minSNIR
+attr title "Min SNIR, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Single.hostF.udpApp[0] "packets sent" 33
+scalar Single.hostF.udpApp[0] "packets received" 0
+scalar Single.hostF.udpApp[0] rcvdPk:count 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, count"
+scalar Single.hostF.udpApp[0] rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, sum(packetBytes)"
+statistic Single.hostF.udpApp[0] rcvdPkLifetime:stats
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rcvdPk)
+attr title "received packet lifetime, stats"
+attr unit s
+scalar Single.hostF.udpApp[0] sentPk:count 33
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, count"
+scalar Single.hostF.udpApp[0] sentPk:sum(packetBytes) 3300
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, sum(packetBytes)"
+scalar Single.hostF.udpApp[1] "packets sent" 33
+scalar Single.hostF.udpApp[1] "packets received" 0
+scalar Single.hostF.udpApp[1] rcvdPk:count 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, count"
+scalar Single.hostF.udpApp[1] rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, sum(packetBytes)"
+statistic Single.hostF.udpApp[1] rcvdPkLifetime:stats
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rcvdPk)
+attr title "received packet lifetime, stats"
+attr unit s
+scalar Single.hostF.udpApp[1] sentPk:count 33
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, count"
+scalar Single.hostF.udpApp[1] sentPk:sum(packetBytes) 3300
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, sum(packetBytes)"
+scalar Single.hostF.udpApp[2] "packets sent" 33
+scalar Single.hostF.udpApp[2] "packets received" 0
+scalar Single.hostF.udpApp[2] rcvdPk:count 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, count"
+scalar Single.hostF.udpApp[2] rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, sum(packetBytes)"
+statistic Single.hostF.udpApp[2] rcvdPkLifetime:stats
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rcvdPk)
+attr title "received packet lifetime, stats"
+attr unit s
+scalar Single.hostF.udpApp[2] sentPk:count 33
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, count"
+scalar Single.hostF.udpApp[2] sentPk:sum(packetBytes) 3300
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, sum(packetBytes)"
+scalar Single.hostF.udp droppedPkBadChecksum:count 0
+attr interpolationmode none
+attr title "packets dropped (checksum error), count"
+scalar Single.hostF.udp droppedPkWrongPort:count 0
+attr interpolationmode none
+attr title "packets dropped (wrong port), count"
+scalar Single.hostF.udp passedUpPk:count 0
+attr interpolationmode none
+attr title "packets passed up, count"
+scalar Single.hostF.udp rcvdPk:count 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, count"
+scalar Single.hostF.udp rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, sum(packetBytes)"
+scalar Single.hostF.udp sentPk:count 99
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, count"
+scalar Single.hostF.udp sentPk:sum(packetBytes) 10692
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, sum(packetBytes)"
+scalar Single.hostG.lo0.lo droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar Single.hostG.lo0.lo droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar Single.hostG.lo0.lo rcvdPkFromHL:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar Single.hostG.lo0.lo rcvdPkFromHL:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar Single.hostG.lo0.lo passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar Single.hostG.lo0.lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar Single.hostG.wlan[0].mac numRetry 0
+scalar Single.hostG.wlan[0].mac numSentWithoutRetry 0
+scalar Single.hostG.wlan[0].mac numGivenUp 0
+scalar Single.hostG.wlan[0].mac numCollision 0
+scalar Single.hostG.wlan[0].mac numSent 99
+scalar Single.hostG.wlan[0].mac numReceived 0
+scalar Single.hostG.wlan[0].mac numSentBroadcast 0
+scalar Single.hostG.wlan[0].mac numReceivedBroadcast 0
+scalar Single.hostG.wlan[0].radio transmissionState:count 396
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, count"
+scalar Single.hostG.wlan[0].radio receptionState:count 504
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, count"
+scalar Single.hostG.wlan[0].radio radioMode:count 200
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, count"
+statistic Single.hostG.wlan[0].radio symbolErrorRate:histogram
+field count 128
+field mean 0.671875
+field stddev 0.47137552109731
+field min 0
+field max 1
+field sum 86
+field sqrsum 86
+attr source symbolErrorRate
+attr title "Symbol error rate, histogram"
+bin	-inf	0
+bin	0	42
+bin	1	86
+bin	2	0
+statistic Single.hostG.wlan[0].radio bitErrorRate:histogram
+field count 128
+field mean 0.671875
+field stddev 0.47137552109731
+field min 0
+field max 1
+field sum 86
+field sqrsum 86
+attr source bitErrorRate
+attr title "Bit error rate, histogram"
+bin	-inf	0
+bin	0	42
+bin	1	86
+bin	2	0
+statistic Single.hostG.wlan[0].radio packetErrorRate:histogram
+field count 128
+field mean 0.671875
+field stddev 0.47137552109731
+field min 0
+field max 1
+field sum 86
+field sqrsum 86
+attr source packetErrorRate
+attr title "Packet error rate, histogram"
+bin	-inf	0
+bin	0	42
+bin	1	86
+bin	2	0
+statistic Single.hostG.wlan[0].radio minSNIR:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr source minSNIR
+attr title "Min SNIR, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Single.hostG.udpApp[0] "packets sent" 33
+scalar Single.hostG.udpApp[0] "packets received" 0
+scalar Single.hostG.udpApp[0] rcvdPk:count 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, count"
+scalar Single.hostG.udpApp[0] rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, sum(packetBytes)"
+statistic Single.hostG.udpApp[0] rcvdPkLifetime:stats
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rcvdPk)
+attr title "received packet lifetime, stats"
+attr unit s
+scalar Single.hostG.udpApp[0] sentPk:count 33
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, count"
+scalar Single.hostG.udpApp[0] sentPk:sum(packetBytes) 3300
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, sum(packetBytes)"
+scalar Single.hostG.udpApp[1] "packets sent" 33
+scalar Single.hostG.udpApp[1] "packets received" 0
+scalar Single.hostG.udpApp[1] rcvdPk:count 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, count"
+scalar Single.hostG.udpApp[1] rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, sum(packetBytes)"
+statistic Single.hostG.udpApp[1] rcvdPkLifetime:stats
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rcvdPk)
+attr title "received packet lifetime, stats"
+attr unit s
+scalar Single.hostG.udpApp[1] sentPk:count 33
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, count"
+scalar Single.hostG.udpApp[1] sentPk:sum(packetBytes) 3300
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, sum(packetBytes)"
+scalar Single.hostG.udpApp[2] "packets sent" 33
+scalar Single.hostG.udpApp[2] "packets received" 0
+scalar Single.hostG.udpApp[2] rcvdPk:count 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, count"
+scalar Single.hostG.udpApp[2] rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, sum(packetBytes)"
+statistic Single.hostG.udpApp[2] rcvdPkLifetime:stats
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rcvdPk)
+attr title "received packet lifetime, stats"
+attr unit s
+scalar Single.hostG.udpApp[2] sentPk:count 33
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, count"
+scalar Single.hostG.udpApp[2] sentPk:sum(packetBytes) 3300
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, sum(packetBytes)"
+scalar Single.hostG.udp droppedPkBadChecksum:count 0
+attr interpolationmode none
+attr title "packets dropped (checksum error), count"
+scalar Single.hostG.udp droppedPkWrongPort:count 0
+attr interpolationmode none
+attr title "packets dropped (wrong port), count"
+scalar Single.hostG.udp passedUpPk:count 0
+attr interpolationmode none
+attr title "packets passed up, count"
+scalar Single.hostG.udp rcvdPk:count 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, count"
+scalar Single.hostG.udp rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, sum(packetBytes)"
+scalar Single.hostG.udp sentPk:count 99
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, count"
+scalar Single.hostG.udp sentPk:sum(packetBytes) 10692
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, sum(packetBytes)"
+scalar Single.hostH.lo0.lo droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar Single.hostH.lo0.lo droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar Single.hostH.lo0.lo rcvdPkFromHL:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar Single.hostH.lo0.lo rcvdPkFromHL:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar Single.hostH.lo0.lo passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar Single.hostH.lo0.lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar Single.hostH.wlan[0].mac numRetry 0
+scalar Single.hostH.wlan[0].mac numSentWithoutRetry 0
+scalar Single.hostH.wlan[0].mac numGivenUp 0
+scalar Single.hostH.wlan[0].mac numCollision 0
+scalar Single.hostH.wlan[0].mac numSent 99
+scalar Single.hostH.wlan[0].mac numReceived 0
+scalar Single.hostH.wlan[0].mac numSentBroadcast 0
+scalar Single.hostH.wlan[0].mac numReceivedBroadcast 0
+scalar Single.hostH.wlan[0].radio transmissionState:count 396
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, count"
+scalar Single.hostH.wlan[0].radio receptionState:count 485
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, count"
+scalar Single.hostH.wlan[0].radio radioMode:count 200
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, count"
+statistic Single.hostH.wlan[0].radio symbolErrorRate:histogram
+field count 118
+field mean 0.70338983050847
+field stddev 0.4587109779188
+field min 0
+field max 1
+field sum 83
+field sqrsum 83
+attr source symbolErrorRate
+attr title "Symbol error rate, histogram"
+bin	-inf	0
+bin	0	35
+bin	1	83
+bin	2	0
+statistic Single.hostH.wlan[0].radio bitErrorRate:histogram
+field count 118
+field mean 0.70338983050847
+field stddev 0.4587109779188
+field min 0
+field max 1
+field sum 83
+field sqrsum 83
+attr source bitErrorRate
+attr title "Bit error rate, histogram"
+bin	-inf	0
+bin	0	35
+bin	1	83
+bin	2	0
+statistic Single.hostH.wlan[0].radio packetErrorRate:histogram
+field count 118
+field mean 0.70338983050847
+field stddev 0.4587109779188
+field min 0
+field max 1
+field sum 83
+field sqrsum 83
+attr source packetErrorRate
+attr title "Packet error rate, histogram"
+bin	-inf	0
+bin	0	35
+bin	1	83
+bin	2	0
+statistic Single.hostH.wlan[0].radio minSNIR:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr source minSNIR
+attr title "Min SNIR, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Single.hostH.udpApp[0] "packets sent" 33
+scalar Single.hostH.udpApp[0] "packets received" 0
+scalar Single.hostH.udpApp[0] rcvdPk:count 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, count"
+scalar Single.hostH.udpApp[0] rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, sum(packetBytes)"
+statistic Single.hostH.udpApp[0] rcvdPkLifetime:stats
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rcvdPk)
+attr title "received packet lifetime, stats"
+attr unit s
+scalar Single.hostH.udpApp[0] sentPk:count 33
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, count"
+scalar Single.hostH.udpApp[0] sentPk:sum(packetBytes) 3300
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, sum(packetBytes)"
+scalar Single.hostH.udpApp[1] "packets sent" 33
+scalar Single.hostH.udpApp[1] "packets received" 0
+scalar Single.hostH.udpApp[1] rcvdPk:count 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, count"
+scalar Single.hostH.udpApp[1] rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, sum(packetBytes)"
+statistic Single.hostH.udpApp[1] rcvdPkLifetime:stats
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rcvdPk)
+attr title "received packet lifetime, stats"
+attr unit s
+scalar Single.hostH.udpApp[1] sentPk:count 33
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, count"
+scalar Single.hostH.udpApp[1] sentPk:sum(packetBytes) 3300
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, sum(packetBytes)"
+scalar Single.hostH.udpApp[2] "packets sent" 33
+scalar Single.hostH.udpApp[2] "packets received" 0
+scalar Single.hostH.udpApp[2] rcvdPk:count 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, count"
+scalar Single.hostH.udpApp[2] rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, sum(packetBytes)"
+statistic Single.hostH.udpApp[2] rcvdPkLifetime:stats
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rcvdPk)
+attr title "received packet lifetime, stats"
+attr unit s
+scalar Single.hostH.udpApp[2] sentPk:count 33
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, count"
+scalar Single.hostH.udpApp[2] sentPk:sum(packetBytes) 3300
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, sum(packetBytes)"
+scalar Single.hostH.udp droppedPkBadChecksum:count 0
+attr interpolationmode none
+attr title "packets dropped (checksum error), count"
+scalar Single.hostH.udp droppedPkWrongPort:count 0
+attr interpolationmode none
+attr title "packets dropped (wrong port), count"
+scalar Single.hostH.udp passedUpPk:count 0
+attr interpolationmode none
+attr title "packets passed up, count"
+scalar Single.hostH.udp rcvdPk:count 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, count"
+scalar Single.hostH.udp rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, sum(packetBytes)"
+scalar Single.hostH.udp sentPk:count 99
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, count"
+scalar Single.hostH.udp sentPk:sum(packetBytes) 10692
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, sum(packetBytes)"
+scalar Single.hostI.lo0.lo droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar Single.hostI.lo0.lo droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar Single.hostI.lo0.lo rcvdPkFromHL:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar Single.hostI.lo0.lo rcvdPkFromHL:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar Single.hostI.lo0.lo passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar Single.hostI.lo0.lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar Single.hostI.wlan[0].mac numRetry 0
+scalar Single.hostI.wlan[0].mac numSentWithoutRetry 0
+scalar Single.hostI.wlan[0].mac numGivenUp 0
+scalar Single.hostI.wlan[0].mac numCollision 0
+scalar Single.hostI.wlan[0].mac numSent 96
+scalar Single.hostI.wlan[0].mac numReceived 0
+scalar Single.hostI.wlan[0].mac numSentBroadcast 0
+scalar Single.hostI.wlan[0].mac numReceivedBroadcast 0
+scalar Single.hostI.wlan[0].radio transmissionState:count 386
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, count"
+scalar Single.hostI.wlan[0].radio receptionState:count 392
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, count"
+scalar Single.hostI.wlan[0].radio radioMode:count 195
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, count"
+statistic Single.hostI.wlan[0].radio symbolErrorRate:histogram
+field count 99
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr source symbolErrorRate
+attr title "Symbol error rate, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	99
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+statistic Single.hostI.wlan[0].radio bitErrorRate:histogram
+field count 99
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr source bitErrorRate
+attr title "Bit error rate, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	99
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+statistic Single.hostI.wlan[0].radio packetErrorRate:histogram
+field count 99
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr source packetErrorRate
+attr title "Packet error rate, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	99
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+statistic Single.hostI.wlan[0].radio minSNIR:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr source minSNIR
+attr title "Min SNIR, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Single.hostI.udpApp[0] "packets sent" 33
+scalar Single.hostI.udpApp[0] "packets received" 0
+scalar Single.hostI.udpApp[0] rcvdPk:count 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, count"
+scalar Single.hostI.udpApp[0] rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, sum(packetBytes)"
+statistic Single.hostI.udpApp[0] rcvdPkLifetime:stats
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rcvdPk)
+attr title "received packet lifetime, stats"
+attr unit s
+scalar Single.hostI.udpApp[0] sentPk:count 33
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, count"
+scalar Single.hostI.udpApp[0] sentPk:sum(packetBytes) 3300
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, sum(packetBytes)"
+scalar Single.hostI.udpApp[1] "packets sent" 33
+scalar Single.hostI.udpApp[1] "packets received" 0
+scalar Single.hostI.udpApp[1] rcvdPk:count 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, count"
+scalar Single.hostI.udpApp[1] rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, sum(packetBytes)"
+statistic Single.hostI.udpApp[1] rcvdPkLifetime:stats
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rcvdPk)
+attr title "received packet lifetime, stats"
+attr unit s
+scalar Single.hostI.udpApp[1] sentPk:count 33
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, count"
+scalar Single.hostI.udpApp[1] sentPk:sum(packetBytes) 3300
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, sum(packetBytes)"
+scalar Single.hostI.udpApp[2] "packets sent" 33
+scalar Single.hostI.udpApp[2] "packets received" 0
+scalar Single.hostI.udpApp[2] rcvdPk:count 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, count"
+scalar Single.hostI.udpApp[2] rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, sum(packetBytes)"
+statistic Single.hostI.udpApp[2] rcvdPkLifetime:stats
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rcvdPk)
+attr title "received packet lifetime, stats"
+attr unit s
+scalar Single.hostI.udpApp[2] sentPk:count 33
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, count"
+scalar Single.hostI.udpApp[2] sentPk:sum(packetBytes) 3300
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, sum(packetBytes)"
+scalar Single.hostI.udp droppedPkBadChecksum:count 0
+attr interpolationmode none
+attr title "packets dropped (checksum error), count"
+scalar Single.hostI.udp droppedPkWrongPort:count 0
+attr interpolationmode none
+attr title "packets dropped (wrong port), count"
+scalar Single.hostI.udp passedUpPk:count 0
+attr interpolationmode none
+attr title "packets passed up, count"
+scalar Single.hostI.udp rcvdPk:count 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, count"
+scalar Single.hostI.udp rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, sum(packetBytes)"
+scalar Single.hostI.udp sentPk:count 99
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, count"
+scalar Single.hostI.udp sentPk:sum(packetBytes) 10692
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, sum(packetBytes)"
+scalar Single.hostQ.lo0.lo droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar Single.hostQ.lo0.lo droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar Single.hostQ.lo0.lo rcvdPkFromHL:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar Single.hostQ.lo0.lo rcvdPkFromHL:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar Single.hostQ.lo0.lo passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar Single.hostQ.lo0.lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar Single.hostQ.wlan[0].mac numRetry 0
+scalar Single.hostQ.wlan[0].mac numSentWithoutRetry 0
+scalar Single.hostQ.wlan[0].mac numGivenUp 0
+scalar Single.hostQ.wlan[0].mac numCollision 0
+scalar Single.hostQ.wlan[0].mac numSent 97
+scalar Single.hostQ.wlan[0].mac numReceived 0
+scalar Single.hostQ.wlan[0].mac numSentBroadcast 0
+scalar Single.hostQ.wlan[0].mac numReceivedBroadcast 0
+scalar Single.hostQ.wlan[0].radio transmissionState:count 388
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, count"
+scalar Single.hostQ.wlan[0].radio receptionState:count 420
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, count"
+scalar Single.hostQ.wlan[0].radio radioMode:count 196
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, count"
+statistic Single.hostQ.wlan[0].radio symbolErrorRate:histogram
+field count 109
+field mean 0.064220183486239
+field stddev 0.24627707062327
+field min 0
+field max 1
+field sum 7
+field sqrsum 7
+attr source symbolErrorRate
+attr title "Symbol error rate, histogram"
+bin	-inf	0
+bin	0	102
+bin	1	7
+bin	2	0
+statistic Single.hostQ.wlan[0].radio bitErrorRate:histogram
+field count 109
+field mean 0.064220183486239
+field stddev 0.24627707062327
+field min 0
+field max 1
+field sum 7
+field sqrsum 7
+attr source bitErrorRate
+attr title "Bit error rate, histogram"
+bin	-inf	0
+bin	0	102
+bin	1	7
+bin	2	0
+statistic Single.hostQ.wlan[0].radio packetErrorRate:histogram
+field count 109
+field mean 0.064220183486239
+field stddev 0.24627707062327
+field min 0
+field max 1
+field sum 7
+field sqrsum 7
+attr source packetErrorRate
+attr title "Packet error rate, histogram"
+bin	-inf	0
+bin	0	102
+bin	1	7
+bin	2	0
+statistic Single.hostQ.wlan[0].radio minSNIR:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr source minSNIR
+attr title "Min SNIR, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Single.hostQ.udpApp[0] "packets sent" 33
+scalar Single.hostQ.udpApp[0] "packets received" 0
+scalar Single.hostQ.udpApp[0] rcvdPk:count 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, count"
+scalar Single.hostQ.udpApp[0] rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, sum(packetBytes)"
+statistic Single.hostQ.udpApp[0] rcvdPkLifetime:stats
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rcvdPk)
+attr title "received packet lifetime, stats"
+attr unit s
+scalar Single.hostQ.udpApp[0] sentPk:count 33
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, count"
+scalar Single.hostQ.udpApp[0] sentPk:sum(packetBytes) 3300
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, sum(packetBytes)"
+scalar Single.hostQ.udpApp[1] "packets sent" 33
+scalar Single.hostQ.udpApp[1] "packets received" 0
+scalar Single.hostQ.udpApp[1] rcvdPk:count 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, count"
+scalar Single.hostQ.udpApp[1] rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, sum(packetBytes)"
+statistic Single.hostQ.udpApp[1] rcvdPkLifetime:stats
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rcvdPk)
+attr title "received packet lifetime, stats"
+attr unit s
+scalar Single.hostQ.udpApp[1] sentPk:count 33
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, count"
+scalar Single.hostQ.udpApp[1] sentPk:sum(packetBytes) 3300
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, sum(packetBytes)"
+scalar Single.hostQ.udpApp[2] "packets sent" 33
+scalar Single.hostQ.udpApp[2] "packets received" 0
+scalar Single.hostQ.udpApp[2] rcvdPk:count 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, count"
+scalar Single.hostQ.udpApp[2] rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, sum(packetBytes)"
+statistic Single.hostQ.udpApp[2] rcvdPkLifetime:stats
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr source messageAge(rcvdPk)
+attr title "received packet lifetime, stats"
+attr unit s
+scalar Single.hostQ.udpApp[2] sentPk:count 33
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, count"
+scalar Single.hostQ.udpApp[2] sentPk:sum(packetBytes) 3300
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, sum(packetBytes)"
+scalar Single.hostQ.udp droppedPkBadChecksum:count 0
+attr interpolationmode none
+attr title "packets dropped (checksum error), count"
+scalar Single.hostQ.udp droppedPkWrongPort:count 0
+attr interpolationmode none
+attr title "packets dropped (wrong port), count"
+scalar Single.hostQ.udp passedUpPk:count 0
+attr interpolationmode none
+attr title "packets passed up, count"
+scalar Single.hostQ.udp rcvdPk:count 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, count"
+scalar Single.hostQ.udp rcvdPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, sum(packetBytes)"
+scalar Single.hostQ.udp sentPk:count 99
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, count"
+scalar Single.hostQ.udp sentPk:sum(packetBytes) 10692
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, sum(packetBytes)"
+

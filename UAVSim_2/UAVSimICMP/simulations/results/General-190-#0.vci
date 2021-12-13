@@ -1,0 +1,831 @@
+file 15958032 1550458857                                        
+version 2
+run General-0-20190217-22:00:49-7051
+attr configname General
+attr datetime 20190217-22:00:49
+attr experiment General
+attr inifile omnetpp2.ini
+attr iterationvars $0=190
+attr iterationvarsf 190-
+attr measurement $0=190
+attr network Net
+attr processid 7051
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 190
+param **.constraintAreaMinX 0m
+param **.constraintAreaMinY 0m
+param **.constraintAreaMinZ 0m
+param **.constraintAreaMaxX 600m
+param **.constraintAreaMaxY 400m
+param **.constraintAreaMaxZ 0m
+param **.numHosts 5
+param **.numAttackHosts 4
+param *.host[*].numPingApps 1
+param *.host[*].pingApp[*].destAddr "\"host[0]\""
+param *.host[*].pingApp[*].sendInterval .1s
+param *.host[*].mobilityType "\"RandomWPMobility\""
+param **.host*.mobility.speed 1mps
+param *.attackhost[*].numPingApps 1
+param *.attackhost[*].pingApp[*].destAddr "\"host[0]\""
+param *.attackhost[*].pingApp[*].sendInterval .007s
+param **.attackhost*.mobilityType "\"LinearMobility\""
+param **.attackhost*.mobility.speed 1mps
+param *.host[0].pingApp[0].destAddr "\"\""
+param **.pingApp[*].printPing true
+param **.wlan[*].typename "\"IdealWirelessNic\""
+param **.wlan[*].bitrate 2Mbps
+param **.wlan[*].mac.address "\"auto\""
+param **.wlan[*].mac.headerLength 20B
+param **.wlan[*].radioType "\"IdealRadio\""
+param **.wlan[*].radio.transmitter.headerBitLength 100b
+param **.wlan[*].radio.transmitter.interferenceRange 0m
+param **.wlan[*].radio.transmitter.detectionRange 1000m
+param **.wlan[*].radio.receiver.ignoreInterference true
+param **.wlan[*].radio.transmitter.communicationRange 1000m
+
+vector 0 Net.host[0].wlan[0].queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Net.host[1].wlan[0].queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Net.host[2].wlan[0].queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Net.host[3].wlan[0].queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 4 Net.host[4].wlan[0].queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 5 Net.attackhost[0].wlan[0].queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 6 Net.attackhost[1].wlan[0].queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 7 Net.attackhost[2].wlan[0].queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 8 Net.attackhost[3].wlan[0].queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 9 Net.host[0].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 10 Net.host[1].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 11 Net.host[2].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 12 Net.host[3].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 13 Net.host[4].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 14 Net.attackhost[0].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 15 Net.attackhost[1].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 16 Net.attackhost[2].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 17 Net.attackhost[3].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 18 Net.host[0].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 19 Net.host[0].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 20 Net.host[1].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 21 Net.host[1].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 22 Net.host[2].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 23 Net.host[2].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 24 Net.host[3].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 25 Net.host[3].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 26 Net.host[4].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 27 Net.host[4].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 28 Net.attackhost[0].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 29 Net.attackhost[0].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 30 Net.attackhost[1].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 31 Net.attackhost[1].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 32 Net.attackhost[2].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 33 Net.attackhost[2].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 34 Net.attackhost[3].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 35 Net.attackhost[3].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 36 Net.attackhost[0].pingApp[0] pingTxSeq:vector ETV
+attr interpolationmode none
+attr title "ping tx seq, vector"
+vector 37 Net.attackhost[0].networkLayer.arp sentReq:vector ETV
+attr title "ARP request sent, vector"
+vector 38 Net.attackhost[0].wlan[0].queue rcvdPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "received packets, vector(packetBytes)"
+vector 39 Net.attackhost[0].wlan[0].queue queueingTime:vector ETV
+attr interpolationmode none
+attr title "queueing time, vector"
+vector 40 Net.attackhost[0].wlan[0].mac rcvdPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+vector 41 Net.attackhost[0].wlan[0].mac sentDownPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, vector(packetBytes)"
+vector 42 Net.attackhost[1].wlan[0].mac rcvdPkFromLL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, vector(packetBytes)"
+vector 43 Net.attackhost[1].wlan[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 44 Net.host[2].wlan[0].mac rcvdPkFromLL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, vector(packetBytes)"
+vector 45 Net.host[2].wlan[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 46 Net.host[1].wlan[0].mac rcvdPkFromLL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, vector(packetBytes)"
+vector 47 Net.host[1].wlan[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 48 Net.attackhost[2].wlan[0].mac rcvdPkFromLL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, vector(packetBytes)"
+vector 49 Net.attackhost[2].wlan[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 50 Net.attackhost[3].wlan[0].mac rcvdPkFromLL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, vector(packetBytes)"
+vector 51 Net.attackhost[3].wlan[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 52 Net.host[4].wlan[0].mac rcvdPkFromLL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, vector(packetBytes)"
+vector 53 Net.host[4].wlan[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 54 Net.host[3].wlan[0].mac rcvdPkFromLL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, vector(packetBytes)"
+vector 55 Net.host[3].wlan[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 56 Net.host[0].wlan[0].mac rcvdPkFromLL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, vector(packetBytes)"
+vector 57 Net.host[0].wlan[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 58 Net.host[0].networkLayer.arp sentReply:vector ETV
+attr title "ARP replies sent, vector"
+vector 59 Net.host[0].wlan[0].queue rcvdPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "received packets, vector(packetBytes)"
+vector 60 Net.host[0].wlan[0].queue queueingTime:vector ETV
+attr interpolationmode none
+attr title "queueing time, vector"
+vector 61 Net.host[0].wlan[0].mac rcvdPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+vector 62 Net.host[0].wlan[0].mac sentDownPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, vector(packetBytes)"
+vector 63 Net.host[4].wlan[0].mac droppedPkNotForUs:vector(packetBytes) ETV
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, vector(packetBytes)"
+vector 64 Net.attackhost[3].wlan[0].mac droppedPkNotForUs:vector(packetBytes) ETV
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, vector(packetBytes)"
+vector 65 Net.host[3].wlan[0].mac droppedPkNotForUs:vector(packetBytes) ETV
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, vector(packetBytes)"
+vector 66 Net.host[1].wlan[0].mac droppedPkNotForUs:vector(packetBytes) ETV
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, vector(packetBytes)"
+vector 67 Net.attackhost[1].wlan[0].mac droppedPkNotForUs:vector(packetBytes) ETV
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, vector(packetBytes)"
+vector 68 Net.host[2].wlan[0].mac droppedPkNotForUs:vector(packetBytes) ETV
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, vector(packetBytes)"
+vector 69 Net.attackhost[2].wlan[0].mac droppedPkNotForUs:vector(packetBytes) ETV
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, vector(packetBytes)"
+vector 70 Net.attackhost[0].wlan[0].mac rcvdPkFromLL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, vector(packetBytes)"
+vector 71 Net.attackhost[0].wlan[0].mac passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 72 Net.attackhost[0].pingApp[0] pingRxSeq:vector ETV
+attr interpolationmode none
+attr title "ping rx seq, vector"
+vector 73 Net.attackhost[0].pingApp[0] rtt:vector ETV
+attr interpolationmode none
+attr title "ping round-trip time, vector"
+attr unit s
+vector 74 Net.attackhost[2].pingApp[0] pingTxSeq:vector ETV
+attr interpolationmode none
+attr title "ping tx seq, vector"
+vector 75 Net.attackhost[2].networkLayer.arp sentReq:vector ETV
+attr title "ARP request sent, vector"
+vector 76 Net.attackhost[2].wlan[0].queue rcvdPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "received packets, vector(packetBytes)"
+vector 77 Net.attackhost[2].wlan[0].queue queueingTime:vector ETV
+attr interpolationmode none
+attr title "queueing time, vector"
+vector 78 Net.attackhost[2].wlan[0].mac rcvdPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+vector 79 Net.attackhost[2].wlan[0].mac sentDownPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, vector(packetBytes)"
+vector 80 Net.attackhost[0].wlan[0].mac droppedPkNotForUs:vector(packetBytes) ETV
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, vector(packetBytes)"
+vector 81 Net.attackhost[2].pingApp[0] pingRxSeq:vector ETV
+attr interpolationmode none
+attr title "ping rx seq, vector"
+vector 82 Net.attackhost[2].pingApp[0] rtt:vector ETV
+attr interpolationmode none
+attr title "ping round-trip time, vector"
+attr unit s
+vector 83 Net.attackhost[3].pingApp[0] pingTxSeq:vector ETV
+attr interpolationmode none
+attr title "ping tx seq, vector"
+vector 84 Net.attackhost[3].networkLayer.arp sentReq:vector ETV
+attr title "ARP request sent, vector"
+vector 85 Net.attackhost[3].wlan[0].queue rcvdPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "received packets, vector(packetBytes)"
+vector 86 Net.attackhost[3].wlan[0].queue queueingTime:vector ETV
+attr interpolationmode none
+attr title "queueing time, vector"
+vector 87 Net.attackhost[3].wlan[0].mac rcvdPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+vector 88 Net.attackhost[3].wlan[0].mac sentDownPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, vector(packetBytes)"
+vector 89 Net.attackhost[1].pingApp[0] pingTxSeq:vector ETV
+attr interpolationmode none
+attr title "ping tx seq, vector"
+vector 90 Net.attackhost[1].networkLayer.arp sentReq:vector ETV
+attr title "ARP request sent, vector"
+vector 91 Net.attackhost[1].wlan[0].queue rcvdPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "received packets, vector(packetBytes)"
+vector 92 Net.attackhost[1].wlan[0].queue queueingTime:vector ETV
+attr interpolationmode none
+attr title "queueing time, vector"
+vector 93 Net.attackhost[1].wlan[0].mac rcvdPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+vector 94 Net.attackhost[1].wlan[0].mac sentDownPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, vector(packetBytes)"
+vector 95 Net.host[1].pingApp[0] pingTxSeq:vector ETV
+attr interpolationmode none
+attr title "ping tx seq, vector"
+vector 96 Net.host[1].networkLayer.arp sentReq:vector ETV
+attr title "ARP request sent, vector"
+vector 97 Net.host[1].wlan[0].queue rcvdPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "received packets, vector(packetBytes)"
+vector 98 Net.host[1].wlan[0].queue queueingTime:vector ETV
+attr interpolationmode none
+attr title "queueing time, vector"
+vector 99 Net.host[1].wlan[0].mac rcvdPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+vector 100 Net.host[1].wlan[0].mac sentDownPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, vector(packetBytes)"
+vector 101 Net.host[0].pingApp[0] pingTxSeq:vector ETV
+attr interpolationmode none
+attr title "ping tx seq, vector"
+vector 102 Net.host[0].lo0.lo rcvdPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+vector 103 Net.host[0].lo0.lo passedUpPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, vector(packetBytes)"
+vector 104 Net.host[0].pingApp[0] pingRxSeq:vector ETV
+attr interpolationmode none
+attr title "ping rx seq, vector"
+vector 105 Net.host[3].pingApp[0] pingTxSeq:vector ETV
+attr interpolationmode none
+attr title "ping tx seq, vector"
+vector 106 Net.host[3].networkLayer.arp sentReq:vector ETV
+attr title "ARP request sent, vector"
+vector 107 Net.host[3].wlan[0].queue rcvdPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "received packets, vector(packetBytes)"
+vector 108 Net.host[3].wlan[0].queue queueingTime:vector ETV
+attr interpolationmode none
+attr title "queueing time, vector"
+vector 109 Net.host[3].wlan[0].mac rcvdPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+vector 110 Net.host[3].wlan[0].mac sentDownPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, vector(packetBytes)"
+vector 111 Net.host[2].pingApp[0] pingTxSeq:vector ETV
+attr interpolationmode none
+attr title "ping tx seq, vector"
+vector 112 Net.host[2].networkLayer.arp sentReq:vector ETV
+attr title "ARP request sent, vector"
+vector 113 Net.host[2].wlan[0].queue rcvdPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "received packets, vector(packetBytes)"
+vector 114 Net.host[2].wlan[0].queue queueingTime:vector ETV
+attr interpolationmode none
+attr title "queueing time, vector"
+vector 115 Net.host[2].wlan[0].mac rcvdPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+vector 116 Net.host[2].wlan[0].mac sentDownPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, vector(packetBytes)"
+vector 117 Net.host[4].pingApp[0] pingTxSeq:vector ETV
+attr interpolationmode none
+attr title "ping tx seq, vector"
+vector 118 Net.host[4].networkLayer.arp sentReq:vector ETV
+attr title "ARP request sent, vector"
+vector 119 Net.host[4].wlan[0].queue rcvdPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr title "received packets, vector(packetBytes)"
+vector 120 Net.host[4].wlan[0].queue queueingTime:vector ETV
+attr interpolationmode none
+attr title "queueing time, vector"
+vector 121 Net.host[4].wlan[0].mac rcvdPkFromHL:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, vector(packetBytes)"
+vector 122 Net.host[4].wlan[0].mac sentDownPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, vector(packetBytes)"
+vector 123 Net.attackhost[0].pingApp[0] numLost:vector ETV
+attr interpolationmode none
+attr title "pings lost, vector"
+vector 124 Net.host[1].pingApp[0] pingRxSeq:vector ETV
+attr interpolationmode none
+attr title "ping rx seq, vector"
+vector 125 Net.host[1].pingApp[0] rtt:vector ETV
+attr interpolationmode none
+attr title "ping round-trip time, vector"
+attr unit s
+vector 126 Net.host[1].pingApp[0] numLost:vector ETV
+attr interpolationmode none
+attr title "pings lost, vector"
+vector 127 Net.host[4].pingApp[0] pingRxSeq:vector ETV
+attr interpolationmode none
+attr title "ping rx seq, vector"
+vector 128 Net.host[4].pingApp[0] rtt:vector ETV
+attr interpolationmode none
+attr title "ping round-trip time, vector"
+attr unit s
+vector 129 Net.host[4].pingApp[0] numLost:vector ETV
+attr interpolationmode none
+attr title "pings lost, vector"
+vector 130 Net.host[3].pingApp[0] pingRxSeq:vector ETV
+attr interpolationmode none
+attr title "ping rx seq, vector"
+vector 131 Net.host[3].pingApp[0] rtt:vector ETV
+attr interpolationmode none
+attr title "ping round-trip time, vector"
+attr unit s
+vector 132 Net.attackhost[0].wlan[0].queue dropPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, vector(packetBytes)"
+vector 133 Net.attackhost[2].wlan[0].queue dropPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, vector(packetBytes)"
+vector 134 Net.host[2].pingApp[0] pingRxSeq:vector ETV
+attr interpolationmode none
+attr title "ping rx seq, vector"
+vector 135 Net.host[2].pingApp[0] rtt:vector ETV
+attr interpolationmode none
+attr title "ping round-trip time, vector"
+attr unit s
+vector 136 Net.attackhost[3].pingApp[0] pingRxSeq:vector ETV
+attr interpolationmode none
+attr title "ping rx seq, vector"
+vector 137 Net.attackhost[3].pingApp[0] rtt:vector ETV
+attr interpolationmode none
+attr title "ping round-trip time, vector"
+attr unit s
+vector 138 Net.attackhost[3].pingApp[0] numLost:vector ETV
+attr interpolationmode none
+attr title "pings lost, vector"
+vector 139 Net.host[0].wlan[0].queue dropPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, vector(packetBytes)"
+vector 140 Net.host[3].pingApp[0] numLost:vector ETV
+attr interpolationmode none
+attr title "pings lost, vector"
+vector 141 Net.host[2].pingApp[0] numLost:vector ETV
+attr interpolationmode none
+attr title "pings lost, vector"
+vector 142 Net.attackhost[1].wlan[0].queue dropPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, vector(packetBytes)"
+vector 143 Net.attackhost[1].pingApp[0] pingRxSeq:vector ETV
+attr interpolationmode none
+attr title "ping rx seq, vector"
+vector 144 Net.attackhost[1].pingApp[0] numLost:vector ETV
+attr interpolationmode none
+attr title "pings lost, vector"
+vector 145 Net.attackhost[1].pingApp[0] rtt:vector ETV
+attr interpolationmode none
+attr title "ping round-trip time, vector"
+attr unit s
+vector 146 Net.attackhost[2].pingApp[0] numLost:vector ETV
+attr interpolationmode none
+attr title "pings lost, vector"
+0	24784 147980 0 482035 0 22.963864616854 5451 0 100 271711 19850045
+1	172764 8 0 0 0 0 1 0 0 0 0
+2	172772 1028 0 21689 0 2.117087754698 41 0 20 400 5340
+3	173800 509 0 15333 0 1.111935647648 21 0 10 100 670
+4	174309 56 0 3712 0 0.216396731267 3 0 1 1 1
+5	174365 59640 0 483753 0 23.006756164624 2163 0 100 80931 5303161
+6	234005 88867 0 484201 0 23.057377600044 3272 0 100 54554 1969672
+7	322872 97011 0 484193 0 23.05510938759 3618 0 100 96571 4910449
+8	419883 85102 0 484197 0 23.057318856446 3123 0 93 47831 1520601
+9	504985 16 0 0 0 0 2 0 4 4 16
+10	505001 18 0 0 0 0 2 0 4 4 16
+11	505019 18 0 0 0 0 2 0 4 4 16
+12	505037 18 0 0 0 0 2 0 4 4 16
+13	505055 18 0 0 0 0 2 0 4 4 16
+14	505073 18 0 0 0 0 2 0 4 4 16
+15	505091 18 0 0 0 0 2 0 4 4 16
+16	505109 18 0 0 0 0 2 0 4 4 16
+17	505127 18 0 0 0 0 2 0 4 4 16
+18	505145 501578 0 484215 0 23.058121110324 18282 1 3 37000 92492
+19	1006723 233795 0 482062 0 22.964251199899 8535 1 2 12802 21336
+20	1240518 650374 0 484223 0 23.058586340067 23714 1 3 48610 120992
+21	1890892 12615 0 483859 0 23.012995321853 465 1 2 697 1161
+22	1903507 649917 0 484219 0 23.058585955167 23701 1 3 48590 120952
+23	2553424 12675 0 482119 0 22.970967484792 467 1 2 700 1166
+24	2566099 650625 0 484214 0 23.058121029949 23725 1 3 48635 121065
+25	3216724 12625 0 482027 0 22.963864109865 465 1 2 697 1161
+26	3229349 654038 0 484227 0 23.058586990638 23857 1 3 48845 121495
+27	3883387 12567 0 482205 0 22.976307110735 463 1 2 694 1156
+28	3895954 606006 0 483866 0 23.012996089198 22123 1 3 45357 113023
+29	4501960 75065 0 484216 0 23.058585572647 2715 1 2 4072 6786
+30	4577025 559298 0 484217 0 23.058585940629 20429 1 3 41680 103650
+31	5136323 130713 0 482501 0 22.989843600044 4739 1 2 7108 11846
+32	5267036 565027 0 484221 0 23.058586303897 20632 1 3 42129 104779
+33	5832063 127079 0 482732 0 22.99257538759 4659 1 2 6988 11646
+34	5959142 539701 0 484225 0 23.058586971184 19644 1 3 40034 99476
+35	6498843 154779 0 482646 0 22.991784856446 5667 1 2 8500 14166
+36	6653622 98350 19 484202 0.000119572647 23.058119572647 3295 0 3294 5426865 11919204495
+37	6751972 23 21 21 0.000119572647 0.000119572647 1 1 1 1 1
+38	6751995 92894 23 484205 0.000119572647 23.058119572647 3296 28 84 276808 23250304
+39	6844889 49568 23 484205 0.000119572647 23.058119572647 1357 0 10 1640.6054947116 9655.5571405854
+40	6894457 38884 24 484206 0.000119572647 23.058119572647 1357 28 84 113932 9568720
+41	6933341 40240 24 484206 0.000119572647 23.058119572647 1357 48 104 141072 14668800
+42	6973581 285845 36 484218 0.000361841272 23.058585940629 9734 48 104 1011048 105087168
+43	7259426 26354 36 462723 0.000361841272 22.379312200997 926 28 84 77112 6458592
+44	7285780 332084 40 484220 0.000362101987 23.058585955167 11292 48 104 1173080 121938496
+45	7617864 3473 40 474376 0.000362101987 22.671436314305 125 28 84 9772 800464
+46	7621337 332221 44 484224 0.00036230185 23.058586340067 11295 48 104 1173280 121953920
+47	7953558 3397 44 476559 0.00036230185 22.713463196434 123 28 84 9548 780080
+48	7956955 288697 48 484222 0.00036232345 23.058586303897 9828 48 104 1020712 106086848
+49	8245652 27150 48 470881 0.00036232345 22.580044326619 951 28 84 79100 6622448
+50	8272802 274958 52 484226 0.000363046701 23.058586971184 9331 48 104 969080 100719808
+51	8547760 33445 52 477115 0.000363046701 22.757251543407 1184 28 84 98560 8253952
+52	8581205 333369 56 484228 0.000363087371 23.058586990638 11337 48 104 1177704 122416704
+53	8914574 2628 56 474507 0.000363087371 22.676773351059 95 28 84 7196 582512
+54	8917202 332454 60 484182 0.000363157066 23.051587029988 11304 48 104 1174216 122051264
+55	9249656 3903 60 474226 0.000363157066 22.664331123106 141 28 84 11060 907088
+56	9253559 265780 64 484184 0.000363200046 23.05158711035 9027 48 104 938024 97516864
+57	9519339 256767 64 484184 0.000363200046 23.05158711035 9027 28 84 757484 63606704
+58	9776106 354 66 71713 0.000363200046 7.012620986214 14 1 1 14 14
+59	9776460 256767 68 484188 0.000363200046 23.05158711035 9027 28 84 757484 63606704
+60	10033227 151377 68 482016 0.000363200046 22.963785199899 4267 0 2.058059720794 1385.5911798391 1720.5482020895
+61	10184604 121160 69 482017 0.000363200046 22.963785199899 4267 28 84 357756 30032688
+62	10305764 125415 69 482017 0.000363200046 22.963785199899 4267 48 104 443096 46049728
+63	10431179 330660 81 484228 0.000605313326 23.058586990638 11242 48 104 1168608 121508352
+64	10761839 240345 83 484226 0.000605638426 23.058586971184 8147 48 104 846840 88049856
+65	11002184 328424 85 484182 0.000605678835 23.051587029988 11163 48 104 1160336 120645376
+66	11330608 328715 87 484224 0.000606282622 23.058586340067 11172 48 104 1161272 120742720
+67	11659323 258577 89 484218 0.000606625326 23.058585940629 8808 48 104 915416 95173696
+68	11917900 328499 91 484220 0.000606678244 23.058585955167 11167 48 104 1160808 120697152
+69	12246399 260610 93 484222 0.000606749644 23.058586303897 8877 48 104 922592 95920000
+70	12507009 311442 95 483867 0.000606827444 23.012996089198 10599 48 104 1100840 114417472
+71	12818451 18577 95 474600 0.000606827444 22.681054650793 651 28 84 53788 4493104
+72	12837028 19288 159 474603 0.001542082236 22.681054650793 635 0 3240 1564701 4356243749
+73	12856316 23478 159 474603 0.001542082236 22.681054650793 581 0.000935078146 0.636998629085 104.36559078671 34.416353369604
+74	12879794 95029 160 484190 0.00410938759 23.05510938759 3294 0 3293 5423571 11908354059
+75	12974823 23 162 162 0.00410938759 0.00410938759 1 1 1 1 1
+76	12974846 89576 164 484193 0.00410938759 23.05510938759 3295 28 84 276724 23243248
+77	13064422 85088 164 482690 0.00410938759 22.99210938759 2329 0 6.975 1007.7691403224 3904.174700449
+78	13149510 65864 165 482691 0.00410938759 22.99210938759 2329 28 84 195580 16427152
+79	13215374 68192 165 482691 0.00410938759 22.99210938759 2329 48 104 242160 25181952
+80	13283566 292230 241 483867 0.004596564556 23.012996089198 9948 48 104 1034032 107512448
+81	13575796 28456 298 470884 0.005531585919 22.580044326619 937 0 3225 2062024 5269323774
+82	13604252 27032 298 470884 0.005531585919 22.580044326619 670 0.000934939029 0.698590235737 93.027204859814 23.726777677092
+83	13631284 98324 301 484194 0.006318856446 23.057318856446 3294 0 3293 5423571 11908354059
+84	13729608 102 303 26508 0.006318856446 3.009318856446 4 1 1 4 4
+85	13729710 81430 305 484197 0.006318856446 23.057318856446 2869 28 84 240772 20218576
+86	13811140 96280 305 482604 0.006318856446 22.991318856446 2833 0 0.651 164.68732209745 36.82966648506
+87	13907420 80218 306 482605 0.006318856446 22.991318856446 2833 28 84 237748 19964560
+88	13987638 83047 306 482605 0.006318856446 22.991318856446 2833 48 104 294408 30607680
+89	14070685 98324 316 484198 0.006377600044 23.057377600044 3294 0 3293 5423571 11908354059
+90	14169009 206 318 71658 0.006377600044 7.012377600044 8 1 1 8 8
+91	14169215 69965 320 484201 0.006377600044 23.057377600044 2444 28 84 204848 17194688
+92	14239180 85370 320 482459 0.006377600044 22.989377600044 2369 0 0.558 154.97989777984 30.771700641049
+93	14324550 67721 321 482460 0.006377600044 22.989377600044 2369 28 84 198548 16665488
+94	14392271 70082 321 482460 0.006377600044 22.989377600044 2369 48 104 245928 25555008
+95	14462353 6631 478 483844 0.012529321853 23.012529321853 231 0 230 26565 4082155
+96	14468984 24 480 480 0.012529321853 0.012529321853 1 1 1 1 1
+97	14469008 6535 482 483847 0.012529321853 23.012529321853 232 28 84 19432 1630720
+98	14475543 6303 482 483847 0.012529321853 23.012529321853 232 0 0 0 0
+99	14481846 6535 483 483848 0.012529321853 23.012529321853 232 28 84 19432 1630720
+100	14488381 6998 483 483848 0.012529321853 23.012529321853 232 48 104 24072 2500800
+101	14495379 6862 847 484082 0.040155322454 23.040155322454 231 0 230 26565 4082155
+102	14502241 13482 850 484089 0.040155322454 23.040155322454 462 84 84 38808 3259872
+103	14515723 13482 850 484089 0.040155322454 23.040155322454 462 84 84 38808 3259872
+104	14529205 6862 857 484092 0.040155322454 23.040155322454 231 0 230 26565 4082155
+105	14536067 6833 1112 482002 0.063398109865 22.963398109865 230 0 229 26335 4029255
+106	14542900 53 1114 14665 0.063398109865 1.063398109865 2 1 1 2 2
+107	14542953 6772 1116 482005 0.063398109865 22.963398109865 232 28 84 19376 1624448
+108	14549725 6670 1116 482005 0.063398109865 22.963398109865 232 0 0.004664801497 0.025656408186 8.3777435854047e-05
+109	14556395 6772 1117 482006 0.063398109865 22.963398109865 232 28 84 19376 1624448
+110	14563167 7002 1117 482006 0.063398109865 22.963398109865 232 48 104 24016 2492288
+111	14570169 6833 1217 482105 0.070501484792 22.970501484792 230 0 229 26335 4029255
+112	14577002 80 1219 20250 0.070501484792 2.070501484792 3 1 1 3 3
+113	14577082 6800 1221 482108 0.070501484792 22.970501484792 233 28 84 19404 1625232
+114	14583882 6825 1221 482108 0.070501484792 22.970501484792 233 0 0.009349445703 0.098169180751 0.00062718207639856
+115	14590707 6799 1222 482109 0.070501484792 22.970501484792 233 28 84 19404 1625232
+116	14597506 7029 1222 482109 0.070501484792 22.970501484792 233 48 104 24064 2494592
+117	14604535 6834 1303 482190 0.075841110735 22.975841110735 230 0 229 26335 4029255
+118	14611369 26 1305 1305 0.075841110735 0.075841110735 1 1 1 1 1
+119	14611395 6741 1307 482194 0.075841110735 22.975841110735 231 28 84 19348 1623664
+120	14618136 6523 1307 482194 0.075841110735 22.975841110735 231 0 0.000466113342 0.000466113342 2.1726164759041e-07
+121	14624659 6741 1308 482195 0.075841110735 22.975841110735 231 28 84 19348 1623664
+122	14631400 6971 1308 482195 0.075841110735 22.975841110735 231 48 104 23968 2489984
+123	14638371 688 3108 470983 0.20867472825 22.582054651526 22 1 2606 44132 105120590
+124	14639059 3181 5297 476562 0.320138396614 22.713463196434 109 0 227 10815 1683503
+125	14642240 4437 5297 476562 0.320138396614 22.713463196434 109 0.000933874581 1.967190278189 42.094734018096 49.617010059252
+126	14646677 777 6374 455268 0.334633094083 22.139483119755 27 1 119 1468 128312
+127	14647454 2374 6436 474510 0.335566755834 22.676773351059 81 0 226 8644 1375804
+128	14649828 3304 6436 474510 0.335566755834 22.676773351059 81 0.000932226778 1.994534313636 27.926931261176 38.83111035333
+129	14653132 1064 11867 459684 0.583786081158 22.276773350807 37 1 146 2083 199457
+130	14654196 3704 15817 474229 1.208203440052 22.664331123106 127 0 226 11848 1645840
+131	14657900 5175 15817 474229 1.208203440052 22.664331123106 127 0.000932960678 2.005110950039 62.758158924697 73.838200599803
+132	14663075 56069 16342 298257 1.232119572647 17.269119572647 1939 84 84 162876 13681584
+133	14719144 25937 17268 140314 1.43210938759 10.27310938759 957 84 84 80388 6752592
+134	14745081 3293 20688 474379 2.108673253589 22.671436314305 112 0 226 11134 1676296
+135	14748374 4583 20688 474379 2.108673253589 22.671436314305 112 0.000934829513 2.038171768797 66.224215100903 91.16286425338
+136	14752957 36306 28277 477118 3.178416141264 22.757251543407 1168 429 3250 2354862 5690806088
+137	14789263 35979 28277 477118 3.178416141264 22.757251543407 871 0.000932686961 0.697480315 127.7154279614 42.664401460054
+138	14825242 1415 28277 474679 3.178416141264 22.684251544 46 429 2083 61827 96512999
+139	14826657 137486 34708 484188 3.793785278713 23.05158711035 4660 28 84 391328 32868416
+140	14964143 643 46002 455736 5.01698373618 22.164331121877 22 2 100 921 56387
+141	14964786 652 46068 455887 5.017917617421 22.171436317102 22 2 115 1440 119214
+142	14965438 1456 72624 72675 7.078882653855 7.078882653855 52 84 84 4368 366912
+143	14966894 28683 73454 462726 7.085414184637 22.379312200997 914 858 3196 1884269 4365840837
+144	14995577 1167 73454 459787 7.085414184637 22.278312202123 37 858 2283 61806 109787180
+145	14996744 28627 76769 462726 7.112522554542 22.379312200997 690 0.000934600953 0.695632698657 106.51934276574 41.30076917318
+146	15025371 923 153630 467266 10.822599271332 22.481044327298 29 1212 2289 55242 108029506
+0	15026294 8926 484256 512742 23.063785199899 24.113067647393 320 0 100 16066 1028708
+5	15035220 6571 485357 513008 23.100119572647 24.11680791769 237 0 40 4449 111515
+6	15041791 6396 484305 512829 23.064377600044 24.114377600044 231 0 54 4689 140743
+7	15048187 6026 484241 512621 23.06210938759 24.11210938759 222 0 45 4791 133099
+8	15054213 7242 484301 512825 23.064318856446 24.114318856446 261 0 54 6545 226863
+18	15061455 34112 484231 513022 23.058587110324 24.116809451469 1223 1 3 2483 6217
+19	15095567 11282 484258 512751 23.063785199899 24.113251196865 404 1 2 606 1010
+20	15106849 40986 484251 513018 23.063399206048 24.116808686866 1469 1 3 3024 7568
+21	15147835 616 485651 512710 23.112529321853 24.112995321853 22 1 2 33 55
+22	15148451 40506 484252 513016 23.063399326701 24.11680829355 1454 1 3 3000 7512
+23	15188957 616 484351 511789 23.070501484792 24.070967484792 22 1 2 33 55
+24	15189573 40648 484229 513021 23.058587029949 24.116809369209 1458 1 3 3007 7531
+25	15230221 616 484247 511706 23.063398109865 24.063864109865 22 1 2 33 55
+26	15230837 40649 484248 513020 23.063398580845 24.116809331442 1457 1 3 3006 7530
+27	15271486 616 484432 511880 23.075841110735 24.076307110735 22 1 2 33 55
+28	15272102 36396 484254 512759 23.063399567139 24.113252730659 1305 1 3 2644 6592
+29	15308498 8274 484311 513024 23.065119572647 24.11727391769 296 1 2 444 740
+30	15316772 33222 484253 513015 23.063399440667 24.116808290428 1192 1 3 2459 6147
+31	15349994 8938 484561 512483 23.089377600044 24.109843600044 320 1 2 480 800
+32	15358932 35748 484255 513017 23.06339973942 24.116808648146 1282 1 3 2640 6604
+33	15394680 6354 484753 511901 23.09210938759 24.07657538759 230 1 2 345 575
+34	15401034 32455 484250 513019 23.063398886985 24.116809312778 1164 1 3 2405 6039
+35	15433489 10386 484701 512303 23.091318856446 24.107784856446 372 1 2 558 930
+36	15443875 4681 484306 512892 23.065119572647 24.115119572647 151 3295 3445 508870 1715178800
+38	15448556 4379 484309 512895 23.065119572647 24.115119572647 151 84 84 12684 1065456
+39	15452935 5573 484309 513008 23.065119572647 24.11680791769 148 0 0.279 15.560317909286 2.735458960812
+40	15458508 4285 484310 513009 23.065119572647 24.11680791769 148 84 84 12432 1044288
+41	15462793 4433 484310 513009 23.065119572647 24.11680791769 148 104 104 15392 1600768
+42	15467226 17206 484283 512994 23.063865440667 24.116806756645 576 104 104 59904 6230016
+43	15484432 1937 491000 493492 23.364252494882 23.396027878247 67 84 84 5628 472752
+44	15486369 21173 484281 512996 23.063865326701 24.116806759772 709 104 104 73736 7668544
+45	15507542 58 493364 497765 23.395093288632 23.471436309831 2 84 84 168 14112
+46	15507600 21410 484279 513000 23.063865206048 24.116807153084 716 104 104 74464 7744256
+48	15529010 18618 484287 512998 23.06386573942 24.116807114365 623 104 104 64792 6738368
+49	15547628 895 493551 495598 23.396495344967 23.412851496336 31 84 84 2604 218736
+50	15548523 17182 484277 513002 23.063864886985 24.116807778999 575 104 104 59800 6219200
+51	15565705 840 498191 499804 23.49625153742 23.509309070267 29 84 84 2436 204624
+52	15566545 21289 484269 513004 23.063864580845 24.116807797663 712 104 104 74048 7700992
+53	15587834 58 495400 497872 23.411449096339 23.476773351565 2 84 84 168 14112
+54	15587892 21303 484230 513006 23.058587029949 24.11680783543 713 104 104 74152 7711808
+55	15609195 174 493247 497621 23.394158581086 23.464331125074 6 84 84 504 42336
+56	15609369 18144 484232 513008 23.058587110324 24.11680791769 607 104 104 63128 6565312
+57	15627513 17537 484232 513008 23.058587110324 24.11680791769 607 84 84 50988 4282992
+59	15645050 17537 484236 513014 23.058587110324 24.11680791769 607 84 84 50988 4282992
+60	15662587 7708 484256 512699 23.063785199899 24.112785196865 202 0 0.577473003441 58.433766073357 31.166081133091
+61	15670295 5843 484257 512700 23.063785199899 24.112785196865 202 84 84 16968 1425312
+62	15676138 6045 484257 512700 23.063785199899 24.112785196865 202 104 104 21008 2184832
+63	15682183 21229 484269 513004 23.063864580845 24.116807797663 710 104 104 73840 7679360
+64	15703412 16313 484277 513002 23.063864886985 24.116807778999 546 104 104 56784 5905536
+65	15719725 21123 484230 513006 23.058587029949 24.11680783543 707 104 104 73528 7646912
+66	15740848 21410 484279 513000 23.063865206048 24.116807153084 716 104 104 74464 7744256
+67	15762258 15202 484283 512994 23.063865440667 24.116806756645 509 104 104 52936 5505344
+68	15777460 21113 484281 512996 23.063865326701 24.116806759772 707 104 104 73528 7646912
+69	15798573 17692 484287 512998 23.06386573942 24.116807114365 592 104 104 61568 6403072
+70	15816265 18981 484285 512715 23.063865567139 24.112996091022 635 104 104 66040 6868160
+71	15835246 1593 495655 498121 23.413319032705 23.493054644799 55 84 84 4620 388080
+72	15836839 1703 495660 498124 23.413319032705 23.493054644799 55 3302 3356 183095 609537115
+73	15838542 2247 495660 498124 23.413319032705 23.493054644799 55 0.000935072152 0.299199460058 7.010490927916 1.4118289692543
+74	15840789 4530 484238 512618 23.06210938759 24.11210938759 151 3294 3444 508719 1714161211
+76	15845319 4228 484241 512621 23.06210938759 24.11210938759 151 84 84 12684 1065456
+77	15849547 4293 484751 511869 23.09210938759 24.07610938759 115 0 0.279 13.312244245674 2.5023826540701
+78	15853840 3292 484752 511870 23.09210938759 24.07610938759 115 84 84 9660 811440
+79	15857132 3407 484752 511870 23.09210938759 24.07610938759 115 104 104 11960 1243840
+80	15860539 17333 484285 512715 23.063865567139 24.112996091022 580 104 104 60320 6273280
+81	15877872 957 493556 495603 23.396495344967 23.412851496336 31 3229 3341 100892 328395912
+82	15878829 695 494391 495603 23.403039878878 23.412851496336 17 0.021742108746 0.697930491288 8.689256303171 5.653039425069
+83	15879524 4681 484298 512822 23.064318856446 24.114318856446 151 3294 3444 508719 1714161211
+85	15884205 4379 484301 512825 23.064318856446 24.114318856446 151 84 84 12684 1065456
+86	15888584 7025 484699 512257 23.091318856446 24.107318856446 186 0 0.372 25.223891645446 5.9452450167905
+87	15895609 5379 484700 512258 23.091318856446 24.107318856446 186 84 84 15624 1312416
+88	15900988 5565 484700 512258 23.091318856446 24.107318856446 186 104 104 19344 2011776
+89	15906553 4681 484302 512826 23.064377600044 24.114377600044 151 3294 3444 508719 1714161211
+91	15911234 4379 484305 512829 23.064377600044 24.114377600044 151 84 84 12684 1065456
+92	15915613 5946 484559 512441 23.089377600044 24.109377600044 160 0 0.372 17.005243549597 3.5263871409694
+93	15921559 4629 484560 512442 23.089377600044 24.109377600044 160 84 84 13440 1128960
+94	15926188 4789 484560 512442 23.089377600044 24.109377600044 160 104 104 16640 1730560
+95	15930977 330 485646 512653 23.112529321853 24.112529321853 11 231 241 2596 612766
+97	15931307 319 485649 512657 23.112529321853 24.112529321853 11 84 84 924 77616
+98	15931626 308 485649 512657 23.112529321853 24.112529321853 11 0 0 0 0
+99	15931934 319 485650 512658 23.112529321853 24.112529321853 11 84 84 924 77616
+100	15932253 341 485650 512658 23.112529321853 24.112529321853 11 104 104 1144 118976
+101	15932594 310 485875 511532 23.140155322454 24.040155322454 10 231 240 2355 554685
+102	15932904 600 485878 511539 23.140155322454 24.040155322454 20 84 84 1680 141120
+103	15933504 600 485878 511539 23.140155322454 24.040155322454 20 84 84 1680 141120
+104	15934104 310 485885 511542 23.140155322454 24.040155322454 10 231 240 2355 554685
+105	15934414 341 484242 511692 23.063398109865 24.063398109865 11 230 240 2585 607585
+107	15934755 330 484245 511695 23.063398109865 24.063398109865 11 84 84 924 77616
+108	15935085 319 484245 511695 23.063398109865 24.063398109865 11 0 0 0 0
+109	15935404 330 484246 511696 23.063398109865 24.063398109865 11 84 84 924 77616
+110	15935734 341 484246 511696 23.063398109865 24.063398109865 11 104 104 1144 118976
+111	15936075 341 484346 511775 23.070501484792 24.070501484792 11 230 240 2585 607585
+113	15936416 330 484349 511778 23.070501484792 24.070501484792 11 84 84 924 77616
+114	15936746 319 484349 511778 23.070501484792 24.070501484792 11 0 0 0 0
+115	15937065 330 484350 511779 23.070501484792 24.070501484792 11 84 84 924 77616
+116	15937395 341 484350 511779 23.070501484792 24.070501484792 11 104 104 1144 118976
+117	15937736 341 484427 511855 23.075841110735 24.075841110735 11 230 240 2585 607585
+119	15938077 330 484430 511858 23.075841110735 24.075841110735 11 84 84 924 77616
+120	15938407 319 484430 511858 23.075841110735 24.075841110735 11 0 0 0 0
+121	15938726 330 484431 511859 23.075841110735 24.075841110735 11 84 84 924 77616
+122	15939056 341 484431 511859 23.075841110735 24.075841110735 11 104 104 1144 118976
+123	15939397 32 495660 495660 23.413319032705 23.413319032705 1 2667 2667 2667 7112889
+127	15939429 62 495405 497875 23.411449096339 23.476773351565 2 233 234 467 109045
+128	15939491 83 495405 497875 23.411449096339 23.476773351565 2 0.00093224083 0.035607985604 0.036540226434 0.0012687977117398
+129	15939574 31 495405 495405 23.411449096339 23.411449096339 1 152 152 152 23104
+130	15939605 186 493252 497624 23.394158581086 23.464331125074 6 228 234 1384 319266
+131	15939791 251 493252 497624 23.394158581086 23.464331125074 6 0.000933015209 0.530760471221 1.71736403884 0.68269579364959
+134	15940042 62 493369 497768 23.395093288632 23.471436309831 2 228 234 462 106740
+135	15940104 83 493369 497768 23.395093288632 23.471436309831 2 0.000934825039 0.52459180384 0.525526628879 0.27519743455396
+136	15940187 927 498199 499807 23.49625153742 23.509309070267 29 3329 3357 96947 324095851
+137	15941114 1214 498199 499807 23.49625153742 23.509309070267 29 0.003990213821 0.186932680974 2.768381977982 0.35093182610667
+138	15942328 31 498199 498199 23.49625153742 23.49625153742 1 2161 2161 2161 4669921
+139	15942359 12100 484236 513014 23.058587110324 24.11680791769 405 84 84 34020 2857680
+140	15954459 62 493252 497624 23.394158581086 23.464331125074 2 101 102 203 20605
+141	15954521 62 493369 497768 23.395093288632 23.471436309831 2 116 121 237 28097
+143	15954583 2138 491005 493497 23.364252494882 23.396027878247 67 3202 3268 216745 701195133
+144	15956721 32 491005 491005 23.364252494882 23.364252494882 1 2288 2288 2288 5234944
+145	15956753 1214 492309 493497 23.382009702311 23.396027878247 29 0.513650278203 0.695632102267 17.523387026133 10.674821346991
+146	15957967 64 493556 495361 23.396495344967 23.410982975945 2 2292 2374 4666 10889140
+

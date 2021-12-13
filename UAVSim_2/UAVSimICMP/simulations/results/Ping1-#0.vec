@@ -1,0 +1,191 @@
+version 2
+run Ping1-0-20190127-12:27:29-4051
+attr configname Ping1
+attr datetime 20190127-12:27:29
+attr experiment Ping1
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Net
+attr processid 4051
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param *.numHosts 2
+param **.wlan[*].radio.transmitter.communicationRange 1000m
+param **.constraintAreaMinX 0m
+param **.constraintAreaMinY 0m
+param **.constraintAreaMinZ 0m
+param **.constraintAreaMaxX 600m
+param **.constraintAreaMaxY 400m
+param **.constraintAreaMaxZ 0m
+param *.host[0].mobilityType "\"LinearMobility\""
+param **.host*.mobilityType "\"StationaryMobility\""
+param **.host*.mobility.speed 30mps
+param **.host*.mobility.initFromDisplayString true
+param **.host*.mobility.changeInterval "truncnormal(2s, 0.5s)"
+param **.host*.mobility.changeAngleBy "normal(0deg, 30deg)"
+param **.host*.mobility.speed "truncnormal(20mps, 8mps)"
+param **.host*.mobility.updateInterval 100ms
+param *.host[0].pingApp[*].packetSize 10B
+param *.host[0].pingApp[*].sendInterval .01s
+param **.pingApp[*].hopLimit 3
+param **.pingApp[*].startTime 1s
+param **.pingApp[*].stopTime 20s
+param **.pingApp[*].printPing true
+param **.attackhost*.mobilityType "\"StationaryMobility\""
+param **.attackhost*.mobility.speed 12mps
+param **.attackhost*.mobility.initFromDisplayString true
+param **.attackhost*.mobility.changeInterval "truncnormal(2s, 0.5s)"
+param **.attackhost*.mobility.changeAngleBy "normal(0deg, 30deg)"
+param **.attackhost*.mobility.speed "truncnormal(20mps, 8mps)"
+param **.attackhost*.mobility.updateInterval 100ms
+param *.host[0].numPingApps 5
+param *.host[1].numPingApps 2
+param *.host[*].numPingApps 2
+param *.attackhost[*].numPingApps 1
+param *.host[*].pingApp[0].destAddr "\"host[0]\""
+param *.host[*].pingApp[1].destAddr "\"host[0]\""
+param *.attackhost[*].pingApp[0].destAddr "\"host[0]\""
+param *.attackhost[*].pingApp[0].startTime uniform(0.001s,0.001s)
+param *.attackhost[*].pingApp[0].sendInterval .001s
+param **.pingApp[*].printPing true
+param *.attackhost[*].printPing true
+param **.wlan[*].typename "\"IdealWirelessNic\""
+param **.wlan[*].bitrate 2Mbps
+param **.wlan[*].mac.address "\"auto\""
+param **.wlan[*].mac.headerLength 20B
+param **.wlan[*].radioType "\"IdealRadio\""
+param **.wlan[*].radio.transmitter.bitrate 2Mbps
+param **.wlan[*].radio.transmitter.headerBitLength 100b
+param **.wlan[*].radio.transmitter.interferenceRange 0m
+param **.wlan[*].radio.transmitter.detectionRange 100m
+param **.wlan[*].radio.receiver.ignoreInterference true
+param *.attackhost[*].wlan[*].radio.transmitterPower 100W
+param **.wlan[*].radio.radioModel "\"NakagamiModel\""
+param **.wlan[*].radio.transmitter.communicationRange 600m
+
+vector 0 Net.host[0].wlan[0].queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 1 Net.host[1].wlan[0].queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 2 Net.attackhost[0].wlan[0].queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 3 Net.attackhost[1].wlan[0].queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 4 Net.attackhost[2].wlan[0].queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 5 Net.attackhost[3].wlan[0].queue queueLength:vector ETV
+attr interpolationmode sample-hold
+attr title "queue length, vector"
+vector 6 Net.host[0].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 7 Net.host[1].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 8 Net.attackhost[0].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 9 Net.attackhost[1].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 10 Net.attackhost[2].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 11 Net.attackhost[3].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 12 Net.host[0].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 13 Net.host[0].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 14 Net.host[1].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 15 Net.host[1].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 16 Net.attackhost[0].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 17 Net.attackhost[0].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 18 Net.attackhost[1].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 19 Net.attackhost[1].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 20 Net.attackhost[2].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 21 Net.attackhost[2].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 22 Net.attackhost[3].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 23 Net.attackhost[3].wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+0	0	0	0
+1	0	0	0
+2	0	0	0
+3	0	0	0
+4	0	0	0
+5	0	0	0
+6	0	0	0
+6	0	0	4
+7	0	0	0
+7	0	0	4
+8	0	0	0
+8	0	0	4
+9	0	0	0
+9	0	0	4
+10	0	0	0
+10	0	0	4
+11	0	0	0
+11	0	0	4
+12	0	0	1
+13	0	0	1
+14	0	0	1
+15	0	0	1
+16	0	0	1
+17	0	0	1
+18	0	0	1
+19	0	0	1
+20	0	0	1
+21	0	0	1
+22	0	0	1
+23	0	0	1
+

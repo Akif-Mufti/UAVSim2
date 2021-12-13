@@ -1,0 +1,234 @@
+version 2
+run Wireless02-0-20200101-14:56:52-4567
+attr configname Wireless02
+attr datetime 20200101-14:56:52
+attr experiment Wireless02
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Single
+attr processid 4567
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param *.hostA.wlan[0].radio.displayCommunicationRange true
+param *.visualizer.sceneVisualizer.descriptionFigure "\"title\""
+param *.visualizer.mediumVisualizer.displaySignals true
+param *.visualizer.physicalLinkVisualizer.displayLinks true
+param *.visualizer.physicalLinkVisualizer.packetFilter "\"UDPData*\""
+param *.host*.networkLayer.arpType "\"GlobalARP\""
+param *.host*.wlan[0].typename "\"WirelessNic\""
+param *.host*.wlan[0].radioType "\"IdealRadio\""
+param *.host*.wlan[0].macType "\"CsmaCaMac\""
+param *.host*.wlan[0].mac.useAck false
+param *.host*.wlan[0].mac.maxQueueSize 5000
+param *.hostB*.wlan[0].radio.carrierFrequency 1.5GHz
+param *.host*.wlan[0].radio.carrierFrequency .9GHz
+param *.host*.udpApp[*].packetName "\"UDPData\""
+param *.host*.numUdpApps 3
+param *.host*.mobilityType "\"LinearMobility\""
+param *.host*.mobility.speed 12mps
+param *.host*.mobility.angle 270deg
+param *.hostA.udpApp[*].typename "\"UDPBasicApp\""
+param *.hostA.udpApp[*].destAddresses "\"hostB1\""
+param *.hostA.udpApp[0].destPort 5554
+param *.hostA.udpApp[1].destPort 5555
+param *.hostA.udpApp[2].destPort 5556
+param *.hostA.udpApp[*].sendInterval .1s
+param *.hostA.udpApp[*].messageLength 1300B
+param *.hostB*.udpApp[*].typename "\"UDPSink\""
+param *.hostB*.udpApp[0].localPort 5554
+param *.hostB*.udpApp[1].localPort 5555
+param *.hostB*.udpApp[2].localPort 58
+param *.hostC.udpApp[*].typename "\"UDPBasicApp\""
+param *.hostC.udpApp[*].destAddresses "\"hostB1\""
+param *.hostC.udpApp[0].destPort 5554
+param *.hostC.udpApp[1].destPort 5555
+param *.hostC.udpApp[2].destPort 5556
+param *.hostC.udpApp[*].messageLength 100B
+param *.hostC.udpApp[*].sendInterval .1s
+param *.hostD.udpApp[*].typename "\"UDPBasicApp\""
+param *.hostD.udpApp[*].destAddresses "\"hostB1\""
+param *.hostD.udpApp[0].destPort 5554
+param *.hostD.udpApp[1].destPort 5555
+param *.hostD.udpApp[2].destPort 5556
+param *.hostD.udpApp[*].messageLength 100B
+param *.hostD.udpApp[*].sendInterval .1s
+param *.hostE.udpApp[*].typename "\"UDPBasicApp\""
+param *.hostE.udpApp[*].destAddresses "\"hostB1\""
+param *.hostE.udpApp[0].destPort 5554
+param *.hostE.udpApp[1].destPort 5555
+param *.hostE.udpApp[2].destPort 5556
+param *.hostE.udpApp[*].messageLength 100B
+param *.hostE.udpApp[*].sendInterval .1s
+param *.hostF.udpApp[*].typename "\"UDPBasicApp\""
+param *.hostF.udpApp[*].destAddresses "\"hostB1\""
+param *.hostF.udpApp[0].destPort 5554
+param *.hostF.udpApp[1].destPort 5555
+param *.hostF.udpApp[2].destPort 5556
+param *.hostF.udpApp[*].messageLength 100B
+param *.hostF.udpApp[*].sendInterval .01s
+param *.hostG.udpApp[*].typename "\"UDPBasicApp\""
+param *.hostG.udpApp[*].destAddresses "\"hostB1\""
+param *.hostG.udpApp[0].destPort 5554
+param *.hostG.udpApp[1].destPort 5556
+param *.hostG.udpApp[2].destPort 5556
+param *.hostG.udpApp[*].messageLength 100B
+param *.hostG.udpApp[*].sendInterval .01s
+param *.hostH.udpApp[*].typename "\"UDPBasicApp\""
+param *.hostH.udpApp[*].destAddresses "\"hostB1\""
+param *.hostH.udpApp[0].destPort 5554
+param *.hostH.udpApp[1].destPort 5556
+param *.hostH.udpApp[2].destPort 5556
+param *.hostH.udpApp[*].messageLength 100B
+param *.hostH.udpApp[*].sendInterval .01s
+param *.hostI.udpApp[*].typename "\"UDPBasicApp\""
+param *.hostI.udpApp[*].destAddresses "\"hostB1\""
+param *.hostI.udpApp[0].destPort 5554
+param *.hostI.udpApp[1].destPort 5556
+param *.hostI.udpApp[2].destPort 5556
+param *.hostI.udpApp[*].messageLength 100B
+param *.hostI.udpApp[*].sendInterval .01s
+param *.hostQ.udpApp[*].typename "\"UDPBasicApp\""
+param *.hostQ.udpApp[*].destAddresses "\"hostB1\""
+param *.hostQ.udpApp[0].destPort 5554
+param *.hostQ.udpApp[1].destPort 5555
+param *.hostQ.udpApp[2].destPort 5556
+param *.hostQ.udpApp[*].messageLength 100B
+param *.hostQ.udpApp[*].sendInterval .01s
+param *.hostR.udpApp[*].typename "\"UDPBasicApp\""
+param *.hostR.udpApp[*].destAddresses "\"hostB1\""
+param *.hostR.udpApp[0].destPort 5554
+param *.hostR.udpApp[1].destPort 5555
+param *.hostR.udpApp[2].destPort 5556
+param *.hostR.udpApp[*].messageLength 100B
+param *.hostR.udpApp[*].sendInterval .01s
+param *.host*.wlan[0].radio.transmitter.communicationRange 300m
+param *.host*.wlan[0].radio.receiver.ignoreInterference true
+param *.host*.**.bitrate 2Mbps
+
+vector 0 Single.hostA.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 1 Single.hostB1.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 2 Single.hostC.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 3 Single.hostD.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 4 Single.hostE.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 5 Single.hostF.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 6 Single.hostG.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 7 Single.hostH.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 8 Single.hostI.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 9 Single.hostQ.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 10 Single.hostR.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 11 Single.hostA.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 12 Single.hostB1.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 13 Single.hostC.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 14 Single.hostD.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 15 Single.hostE.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 16 Single.hostF.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 17 Single.hostG.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 18 Single.hostH.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 19 Single.hostI.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 20 Single.hostQ.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 21 Single.hostR.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+0	0	0	0
+0	0	0	2
+1	0	0	0
+1	0	0	2
+2	0	0	0
+2	0	0	2
+3	0	0	0
+3	0	0	2
+4	0	0	0
+4	0	0	2
+5	0	0	0
+5	0	0	2
+6	0	0	0
+6	0	0	2
+7	0	0	0
+7	0	0	2
+8	0	0	0
+8	0	0	2
+9	0	0	0
+9	0	0	2
+10	0	0	0
+10	0	0	2
+11	0	0	1
+12	0	0	1
+13	0	0	1
+14	0	0	1
+15	0	0	1
+16	0	0	1
+17	0	0	1
+18	0	0	1
+19	0	0	1
+20	0	0	1
+21	0	0	1
+

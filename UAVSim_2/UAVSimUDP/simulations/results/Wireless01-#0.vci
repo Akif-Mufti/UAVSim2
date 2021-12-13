@@ -1,0 +1,466 @@
+file 200239 1582123361                                          
+version 2
+run Wireless01-0-20200219-09:02:37-3200
+attr configname Wireless01
+attr datetime 20200219-09:02:37
+attr experiment Wireless01
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Single
+attr processid 3200
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param *.host*.networkLayer.arpType "\"GlobalARP\""
+param *.host*.wlan[0].typename "\"WirelessNic\""
+param *.host*.wlan[0].radioType "\"IdealRadio\""
+param *.host*.wlan[0].macType "\"CsmaCaMac\""
+param *.host*.wlan[0].mac.useAck false
+param *.host*.wlan[0].mac.maxQueueSize 5000
+param *.hostB*.wlan[0].radio.carrierFrequency 1.5GHz
+param *.host*.wlan[0].radio.carrierFrequency .9GHz
+param *.host*.udpApp[*].packetName "\"UDPData\""
+param *.host*.numUdpApps 3
+param *.host*.mobilityType "\"LinearMobility\""
+param *.host*.mobility.speed 12mps
+param *.host*.mobility.angle 270deg
+param *.hostA.udpApp[*].typename "\"UDPBasicApp\""
+param *.hostA.udpApp[*].destAddresses "\"hostB1\""
+param *.hostA.udpApp[0].destPort 5554
+param *.hostA.udpApp[1].destPort 5555
+param *.hostA.udpApp[2].destPort 5556
+param *.hostA.udpApp[*].sendInterval .1s
+param *.hostA.udpApp[*].messageLength 1300B
+param *.hostB*.udpApp[*].typename "\"UDPSink\""
+param *.hostB*.udpApp[0].localPort 5
+param *.hostB*.udpApp[1].localPort 55
+param *.hostB*.udpApp[2].localPort 5556
+param *.hostC.udpApp[*].typename "\"UDPBasicApp\""
+param *.hostC.udpApp[*].destAddresses "\"hostB1\""
+param *.hostC.udpApp[0].destPort 5554
+param *.hostC.udpApp[1].destPort 5555
+param *.hostC.udpApp[2].destPort 5556
+param *.hostC.udpApp[*].messageLength 100B
+param *.hostC.udpApp[*].sendInterval .1s
+param *.hostD.udpApp[*].typename "\"UDPBasicApp\""
+param *.hostD.udpApp[*].destAddresses "\"hostB1\""
+param *.hostD.udpApp[0].destPort 5554
+param *.hostD.udpApp[1].destPort 5555
+param *.hostD.udpApp[2].destPort 5556
+param *.hostD.udpApp[*].messageLength 100B
+param *.hostD.udpApp[*].sendInterval .1s
+param *.hostE.udpApp[*].typename "\"UDPBasicApp\""
+param *.hostE.udpApp[*].destAddresses "\"hostB1\""
+param *.hostE.udpApp[0].destPort 5554
+param *.hostE.udpApp[1].destPort 5555
+param *.hostE.udpApp[2].destPort 5556
+param *.hostE.udpApp[*].messageLength 100B
+param *.hostE.udpApp[*].sendInterval .1s
+param *.hostF.udpApp[*].typename "\"UDPBasicApp\""
+param *.hostF.udpApp[*].destAddresses "\"hostB1\""
+param *.hostF.udpApp[0].destPort 5554
+param *.hostF.udpApp[1].destPort 5555
+param *.hostF.udpApp[2].destPort 5556
+param *.hostF.udpApp[*].messageLength 100B
+param *.hostF.udpApp[*].sendInterval .01s
+param *.hostG.udpApp[*].typename "\"UDPBasicApp\""
+param *.hostG.udpApp[*].destAddresses "\"hostB1\""
+param *.hostG.udpApp[0].destPort 5554
+param *.hostG.udpApp[1].destPort 5556
+param *.hostG.udpApp[2].destPort 5556
+param *.hostG.udpApp[*].messageLength 100B
+param *.hostG.udpApp[*].sendInterval .01s
+param *.hostH.udpApp[*].typename "\"UDPBasicApp\""
+param *.hostH.udpApp[*].destAddresses "\"hostB1\""
+param *.hostH.udpApp[0].destPort 5554
+param *.hostH.udpApp[1].destPort 5556
+param *.hostH.udpApp[2].destPort 5556
+param *.hostH.udpApp[*].messageLength 100B
+param *.hostH.udpApp[*].sendInterval .01s
+param *.hostI.udpApp[*].typename "\"UDPBasicApp\""
+param *.hostI.udpApp[*].destAddresses "\"hostB1\""
+param *.hostI.udpApp[0].destPort 5554
+param *.hostI.udpApp[1].destPort 5556
+param *.hostI.udpApp[2].destPort 5556
+param *.hostI.udpApp[*].messageLength 100B
+param *.hostI.udpApp[*].sendInterval .01s
+param *.hostQ.udpApp[*].typename "\"UDPBasicApp\""
+param *.hostQ.udpApp[*].destAddresses "\"hostB1\""
+param *.hostQ.udpApp[0].destPort 5554
+param *.hostQ.udpApp[1].destPort 5555
+param *.hostQ.udpApp[2].destPort 5556
+param *.hostQ.udpApp[*].messageLength 100B
+param *.hostQ.udpApp[*].sendInterval .01s
+param *.host*.wlan[0].radio.transmitter.communicationRange 300m
+param *.host*.wlan[0].radio.receiver.ignoreInterference true
+param *.host*.**.bitrate 2Mbps
+
+vector 0 Single.hostA.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 1 Single.hostB1.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 2 Single.hostC.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 3 Single.hostD.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 4 Single.hostE.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 5 Single.hostF.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 6 Single.hostG.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 7 Single.hostH.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 8 Single.hostI.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 9 Single.hostQ.wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 10 Single.hostA.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 11 Single.hostB1.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 12 Single.hostC.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 13 Single.hostD.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 14 Single.hostE.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 15 Single.hostF.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 16 Single.hostG.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 17 Single.hostH.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 18 Single.hostI.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 19 Single.hostQ.wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 20 Single.hostF.udpApp[0] sentPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+vector 21 Single.hostF.udpApp[1] sentPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+vector 22 Single.hostF.udpApp[2] sentPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+vector 23 Single.hostG.udpApp[0] sentPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+vector 24 Single.hostG.udpApp[1] sentPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+vector 25 Single.hostG.udpApp[2] sentPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+vector 26 Single.hostH.udpApp[0] sentPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+vector 27 Single.hostH.udpApp[1] sentPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+vector 28 Single.hostH.udpApp[2] sentPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+vector 29 Single.hostI.udpApp[0] sentPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+vector 30 Single.hostI.udpApp[1] sentPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+vector 31 Single.hostI.udpApp[2] sentPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+vector 32 Single.hostQ.udpApp[0] sentPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+vector 33 Single.hostQ.udpApp[1] sentPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+vector 34 Single.hostQ.udpApp[2] sentPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+vector 35 Single.hostF.udp sentPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+vector 36 Single.hostG.udp sentPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+vector 37 Single.hostH.udp sentPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+vector 38 Single.hostI.udp sentPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+vector 39 Single.hostQ.udp sentPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+vector 40 Single.hostQ.wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 41 Single.hostI.wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 42 Single.hostF.wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 43 Single.hostG.wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 44 Single.hostH.wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 45 Single.hostA.udpApp[0] sentPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+vector 46 Single.hostA.udpApp[1] sentPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+vector 47 Single.hostA.udpApp[2] sentPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+vector 48 Single.hostC.udpApp[0] sentPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+vector 49 Single.hostC.udpApp[1] sentPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+vector 50 Single.hostC.udpApp[2] sentPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+vector 51 Single.hostD.udpApp[0] sentPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+vector 52 Single.hostD.udpApp[1] sentPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+vector 53 Single.hostD.udpApp[2] sentPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+vector 54 Single.hostE.udpApp[0] sentPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+vector 55 Single.hostE.udpApp[1] sentPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+vector 56 Single.hostE.udpApp[2] sentPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+vector 57 Single.hostA.udp sentPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+vector 58 Single.hostC.udp sentPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+vector 59 Single.hostD.udp sentPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+vector 60 Single.hostE.udp sentPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source sentPk
+attr title "packets sent, vector(packetBytes)"
+vector 61 Single.hostA.wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 62 Single.hostB1.udp rcvdPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, vector(packetBytes)"
+vector 63 Single.hostB1.udp droppedPkWrongPort:vector(count) ETV
+attr interpolationmode none
+attr title "packets dropped (wrong port), vector(count)"
+vector 64 Single.hostB1.udp passedUpPk:vector(count) ETV
+attr interpolationmode none
+attr title "packets passed up, vector(count)"
+vector 65 Single.hostB1.udpApp[2] rcvdPk:vector(packetBytes) ETV
+attr interpolationmode none
+attr source rcvdPk
+attr title "packets received, vector(packetBytes)"
+vector 66 Single.hostB1.udpApp[2] throughput:vector ETV
+attr source throughput(rcvdPk)
+attr title "throughput, vector"
+attr unit bps
+vector 67 Single.hostB1.udpApp[2] endToEndDelay:vector ETV
+attr interpolationmode none
+attr source messageAge(rcvdPk)
+attr title "end-to-end delay, vector"
+attr unit s
+vector 68 Single.hostB1.udpApp[2] rcvdPkSeqNo:vector ETV
+attr interpolationmode none
+attr source appPkSeqNo(rcvdPk)
+attr title "received packet sequence number, vector"
+vector 69 Single.hostE.wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 70 Single.hostC.wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 71 Single.hostD.wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+vector 72 Single.hostB1.wlan[0].radio transmissionState:vector ETV
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, vector"
+0	15790 380 0 15054 0 0.323904784397 20 0 3 47 121
+1	16170 1128 0 15155 0 0.324777253273 48 0 3 117 303
+2	17298 454 0 14646 0 0.318143981957 20 0 3 47 121
+3	17752 454 0 15184 0 0.325781920401 20 0 3 47 121
+4	18206 430 0 13715 0 0.302557165398 20 0 3 47 121
+5	18636 4336 0 15429 0 0.332492685926 195 0 3 485 1261
+6	22972 4587 0 15395 0 0.331952 200 0 3 497 1291
+7	27559 4516 0 15383 0 0.331832 200 0 3 497 1291
+8	32075 4006 0 15418 0 0.332312796669 195 0 3 485 1261
+9	36081 4156 0 15440 0 0.332596935149 196 0 3 487 1265
+10	40237 2878 0 15185 0 0.325782138468 117 0 3 207 503
+11	43115 2961 0 15189 0 0.325782587529 118 0 3 166 378
+12	46076 6449 0 15411 0 0.33205391768 257 0 3 495 1221
+13	52525 10842 0 15433 0 0.332493542553 429 0 3 852 2118
+14	63367 8558 0 15409 0 0.332053569265 341 0 3 685 1671
+15	71925 12782 0 15429 0 0.332492685926 522 0 3 780 1770
+16	84707 12471 0 15420 0 0.332313593338 504 0 3 736 1656
+17	97178 11927 0 15410 0 0.332053870298 485 0 3 700 1566
+18	109105 9194 0 15418 0 0.332312796669 392 0 3 497 1099
+19	118299 10026 0 15440 0 0.332596935149 420 0 3 550 1222
+20	128325 565 40 15209 0.01 0.33 33 100 100 3300 330000
+21	128890 565 41 15210 0.01 0.33 33 100 100 3300 330000
+22	129455 565 42 15211 0.01 0.33 33 100 100 3300 330000
+23	130020 565 43 15212 0.01 0.33 33 100 100 3300 330000
+24	130585 565 44 15213 0.01 0.33 33 100 100 3300 330000
+25	131150 565 45 15214 0.01 0.33 33 100 100 3300 330000
+26	131715 565 46 15215 0.01 0.33 33 100 100 3300 330000
+27	132280 565 47 15216 0.01 0.33 33 100 100 3300 330000
+28	132845 565 48 15217 0.01 0.33 33 100 100 3300 330000
+29	133410 565 49 15218 0.01 0.33 33 100 100 3300 330000
+30	133975 565 50 15219 0.01 0.33 33 100 100 3300 330000
+31	134540 565 51 15220 0.01 0.33 33 100 100 3300 330000
+32	135105 565 52 15221 0.01 0.33 33 100 100 3300 330000
+33	135670 565 53 15222 0.01 0.33 33 100 100 3300 330000
+34	136235 565 54 15223 0.01 0.33 33 100 100 3300 330000
+35	136800 1695 56 15226 0.01 0.33 99 108 108 10692 1154736
+36	138495 1695 62 15229 0.01 0.33 99 108 108 10692 1154736
+37	140190 1695 68 15232 0.01 0.33 99 108 108 10692 1154736
+38	141885 1695 74 15235 0.01 0.33 99 108 108 10692 1154736
+39	143580 1695 80 15238 0.01 0.33 99 108 108 10692 1154736
+40	145275 8668 115 15440 0.01014 0.332596935149 388 0 2 388 582
+41	153943 8366 126 15419 0.01028 0.332312796669 386 0 2 387 581
+42	162309 9026 137 15430 0.01058 0.332492685926 386 0 2 387 581
+43	171335 9538 286 15395 0.012132796669 0.331952 396 0 2 396 594
+44	180873 9396 308 15383 0.012672935149 0.331832 396 0 2 396 594
+45	190269 52 3829 13366 0.1 0.3 3 1300 1300 3900 5070000
+46	190321 52 3830 13367 0.1 0.3 3 1300 1300 3900 5070000
+47	190373 52 3831 13368 0.1 0.3 3 1300 1300 3900 5070000
+48	190425 49 3832 13369 0.1 0.3 3 100 100 300 30000
+49	190474 49 3833 13370 0.1 0.3 3 100 100 300 30000
+50	190523 49 3834 13371 0.1 0.3 3 100 100 300 30000
+51	190572 49 3835 13372 0.1 0.3 3 100 100 300 30000
+52	190621 49 3836 13373 0.1 0.3 3 100 100 300 30000
+53	190670 49 3837 13374 0.1 0.3 3 100 100 300 30000
+54	190719 49 3838 13375 0.1 0.3 3 100 100 300 30000
+55	190768 49 3839 13376 0.1 0.3 3 100 100 300 30000
+56	190817 49 3840 13377 0.1 0.3 3 100 100 300 30000
+57	190866 156 3857 13395 0.1 0.3 9 1308 1308 11772 15397776
+58	191022 147 3863 13398 0.1 0.3 9 108 108 972 104976
+59	191169 147 3869 13401 0.1 0.3 9 108 108 972 104976
+60	191316 147 3875 13404 0.1 0.3 9 108 108 972 104976
+61	191463 764 3949 15054 0.10014 0.323904784397 36 0 2 36 54
+62	192227 963 4300 15192 0.105484468876 0.325782587529 35 108 1308 13380 14001840
+63	193190 596 4300 14620 0.105484468876 0.317580315521 23 1 23 276 4324
+64	193786 306 4767 15192 0.116472468876 0.325782587529 12 1 12 78 650
+65	194092 330 4768 15193 0.116472468876 0.325782587529 12 100 1300 4800 5160000
+66	194422 53 4768 13727 0.1 0.3 3 0 128000 256000 32768000000
+67	194475 456 4768 15193 0.116472468876 0.325782587529 12 0.002557882014 0.02591100635 0.238874298739 0.0052108898710061
+68	194931 303 4768 15193 0.116472468876 0.325782587529 12 0 2 12 20
+69	195234 864 4778 13715 0.116692622032 0.302557165398 36 0 2 36 54
+70	196098 912 4840 14646 0.118061132385 0.318143981957 36 0 2 36 54
+71	197010 912 4870 15184 0.118665878257 0.325781920401 36 0 2 36 54
+72	197922 2316 5076 15155 0.120958957693 0.324777253273 92 0 2 92 138
+

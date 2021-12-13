@@ -1,0 +1,3 @@
+package fanetsim;
+
+@license(LGPL);

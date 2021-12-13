@@ -1,0 +1,2616 @@
+version 2
+run General-0-20190221-19:29:46-14574
+attr configname General
+attr datetime 20190221-19:29:46
+attr experiment General
+attr inifile omnetpp2.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Net
+attr processid 14574
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param **.constraintAreaMinX 0m
+param **.constraintAreaMinY 0m
+param **.constraintAreaMinZ 0m
+param **.constraintAreaMaxX 600m
+param **.constraintAreaMaxY 400m
+param **.constraintAreaMaxZ 0m
+param **.numHosts 5
+param **.numAttackHosts 4
+param *.host[0].numPingApps 1
+param *.host[1].numPingApps 1
+param *.host[2].numPingApps 1
+param *.host[3].numPingApps 1
+param *.host[4].numPingApps 1
+param *.host[*].pingApp[*].destAddr "\"host[0]\""
+param *.host[*].pingApp[*].sendInterval .1s
+param *.host[*].mobilityType "\"RandomWPMobility\""
+param **.host*.mobility.speed 1mps
+param *.attackhost[*].numPingApps 1
+param *.attackhost[*].pingApp[*].destAddr "\"host[0]\""
+param *.attackhost[*].pingApp[*].sendInterval .001s
+param **.attackhost*.mobilityType "\"LinearMobility\""
+param **.attackhost*.mobility.speed 1mps
+param *.host[0].pingApp[0].destAddr "\"\""
+param **.pingApp[*].printPing true
+param **.wlan[*].typename "\"IdealWirelessNic\""
+param **.wlan[*].bitrate 2Mbps
+param **.wlan[*].mac.address "\"auto\""
+param **.wlan[*].mac.headerLength 100B
+param **.wlan[*].radioType "\"IdealRadio\""
+param **.wlan[*].radio.transmitter.headerBitLength 100b
+param **.wlan[*].radio.transmitter.interferenceRange 0m
+param **.wlan[*].radio.transmitter.detectionRange 1000m
+param **.wlan[*].radio.receiver.ignoreInterference true
+param **.wlan[*].radio.transmitter.communicationRange 1000m
+
+scalar Net.radioMedium.propagation "Arrival computation count" 20464
+scalar Net.radioMedium "transmission count" 2558
+scalar Net.radioMedium "radio frame send count" 20464
+scalar Net.radioMedium "reception computation count" 20464
+scalar Net.radioMedium "interference computation count" 64916
+scalar Net.radioMedium "reception decision computation count" 19680
+scalar Net.radioMedium "listening decision computation count" 24772
+scalar Net.radioMedium "reception cache hit" 85.842569147538
+attr unit %
+scalar Net.radioMedium "interference cache hit" 66.666666666667
+attr unit %
+scalar Net.radioMedium "noise cache hit" 0
+attr unit %
+scalar Net.radioMedium "snir cache hit" 50
+attr unit %
+scalar Net.radioMedium "reception decision cache hit" 50
+attr unit %
+scalar Net.radioMedium "reception result cache hit" 0
+attr unit %
+scalar Net.host[0].networkLayer.arp failedARPResolution:count 0
+attr title "ARP failed resolutions, count"
+scalar Net.host[0].networkLayer.arp completedARPResolution:count 35
+attr title "ARP completed resolutions, count"
+scalar Net.host[0].networkLayer.arp initiatedARPResolution:count 0
+attr title "ARP initiated resolutions, count"
+scalar Net.host[0].networkLayer.arp sentReply:count 35
+attr title "ARP replies sent, count"
+scalar Net.host[0].networkLayer.arp sentReq:count 0
+attr title "ARP request sent, count"
+scalar Net.host[0].lo0.lo droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar Net.host[0].lo0.lo droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar Net.host[0].lo0.lo rcvdPkFromHL:count 600
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar Net.host[0].lo0.lo rcvdPkFromHL:sum(packetBytes) 50400
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar Net.host[0].lo0.lo passedUpPk:count 600
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar Net.host[0].lo0.lo passedUpPk:sum(packetBytes) 50400
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+statistic Net.host[0].wlan[0].queue queueingTime:histogram
+field count 1233
+field mean 0.0080035211348281
+field stddev 0.025431983117311
+field min 0
+field max 0.199775381206
+field sum 9.868341559243
+field sqrsum 0.87582154305907
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	0	1087
+bin	0.005	1
+bin	0.01	0
+bin	0.015	28
+bin	0.02	1
+bin	0.025	1
+bin	0.03	0
+bin	0.035	0
+bin	0.04	0
+bin	0.045	0
+bin	0.05	29
+bin	0.055	1
+bin	0.06	31
+bin	0.065	0
+bin	0.07	1
+bin	0.075	0
+bin	0.08	0
+bin	0.085	0
+bin	0.09	30
+bin	0.095	11
+bin	0.1	4
+bin	0.105	0
+bin	0.11	0
+bin	0.115	2
+bin	0.12	0
+bin	0.125	0
+bin	0.13	0
+bin	0.135	0
+bin	0.14	0
+bin	0.145	0
+bin	0.15	1
+bin	0.155	1
+bin	0.16	0
+bin	0.165	0
+bin	0.17	0
+bin	0.175	0
+bin	0.18	0
+bin	0.185	0
+bin	0.19	0
+bin	0.195	4
+bin	0.2	0
+bin	0.205	0
+bin	0.21	0
+bin	0.215	0
+bin	0.22	0
+bin	0.225	0
+bin	0.23	0
+bin	0.235	0
+bin	0.24	0
+bin	0.245	0
+bin	0.25	0
+scalar Net.host[0].wlan[0].queue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar Net.host[0].wlan[0].queue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar Net.host[0].wlan[0].queue queueLength:max 15
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net.host[0].wlan[0].queue queueLength:timeavg 0.32894471864143
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net.host[0].wlan[0].queue rcvdPk:count 1233
+attr interpolationmode none
+attr title "received packets, count"
+scalar Net.host[0].wlan[0].queue rcvdPk:sum(packetBytes) 101612
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar Net.host[0].wlan[0].mac droppedPkNotForUs:count 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, count"
+scalar Net.host[0].wlan[0].mac droppedPkNotForUs:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, sum(packetBytes)"
+scalar Net.host[0].wlan[0].mac rcvdPkFromLL:count 1233
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, count"
+scalar Net.host[0].wlan[0].mac rcvdPkFromLL:sum(packetBytes) 224912
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, sum(packetBytes)"
+scalar Net.host[0].wlan[0].mac sentDownPk:count 1233
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, count"
+scalar Net.host[0].wlan[0].mac sentDownPk:sum(packetBytes) 224912
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, sum(packetBytes)"
+scalar Net.host[0].wlan[0].mac rcvdPkFromHL:count 1233
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar Net.host[0].wlan[0].mac rcvdPkFromHL:sum(packetBytes) 101612
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar Net.host[0].wlan[0].mac passedUpPk:count 1233
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar Net.host[0].wlan[0].mac passedUpPk:sum(packetBytes) 101612
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar Net.host[0].wlan[0].radio transmissionState:count 2467
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, count"
+scalar Net.host[0].wlan[0].radio receptionState:count 2497
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, count"
+scalar Net.host[0].wlan[0].radio radioMode:count 2
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, count"
+statistic Net.host[0].wlan[0].radio symbolErrorRate:histogram
+field count 1233
+field mean 0.02757502027575
+field stddev 0.16381820308263
+field min 0
+field max 1
+field sum 34
+field sqrsum 34
+attr source symbolErrorRate
+attr title "Symbol error rate, histogram"
+bin	-inf	0
+bin	0	1199
+bin	1	34
+bin	2	0
+statistic Net.host[0].wlan[0].radio bitErrorRate:histogram
+field count 1233
+field mean 0.02757502027575
+field stddev 0.16381820308263
+field min 0
+field max 1
+field sum 34
+field sqrsum 34
+attr source bitErrorRate
+attr title "Bit error rate, histogram"
+bin	-inf	0
+bin	0	1199
+bin	1	34
+bin	2	0
+statistic Net.host[0].wlan[0].radio packetErrorRate:histogram
+field count 1233
+field mean 0.02757502027575
+field stddev 0.16381820308263
+field min 0
+field max 1
+field sum 34
+field sqrsum 34
+attr source packetErrorRate
+attr title "Packet error rate, histogram"
+bin	-inf	0
+bin	0	1199
+bin	1	34
+bin	2	0
+statistic Net.host[0].wlan[0].radio minSNIR:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr source minSNIR
+attr title "Min SNIR, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net.host[0].pingApp[0] "Pings sent" 300
+scalar Net.host[0].pingApp[0] "ping loss rate (%)" 0
+scalar Net.host[0].pingApp[0] "ping out-of-order rate (%)" 0
+scalar Net.host[0].pingApp[0] pingRxSeq:count 300
+attr interpolationmode none
+attr title "ping rx seq, count"
+scalar Net.host[0].pingApp[0] pingTxSeq:count 300
+attr interpolationmode none
+attr title "ping tx seq, count"
+scalar Net.host[0].pingApp[0] numOutOfOrderArrivals:last -nan
+attr interpolationmode none
+attr title "ping out-of-order arrivals, last"
+scalar Net.host[0].pingApp[0] numLost:last -nan
+attr interpolationmode none
+attr title "pings lost, last"
+statistic Net.host[0].pingApp[0] rtt:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "ping round-trip time, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net.host[1].networkLayer.arp failedARPResolution:count 0
+attr title "ARP failed resolutions, count"
+scalar Net.host[1].networkLayer.arp completedARPResolution:count 1
+attr title "ARP completed resolutions, count"
+scalar Net.host[1].networkLayer.arp initiatedARPResolution:count 1
+attr title "ARP initiated resolutions, count"
+scalar Net.host[1].networkLayer.arp sentReply:count 0
+attr title "ARP replies sent, count"
+scalar Net.host[1].networkLayer.arp sentReq:count 1
+attr title "ARP request sent, count"
+scalar Net.host[1].lo0.lo droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar Net.host[1].lo0.lo droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar Net.host[1].lo0.lo rcvdPkFromHL:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar Net.host[1].lo0.lo rcvdPkFromHL:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar Net.host[1].lo0.lo passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar Net.host[1].lo0.lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+statistic Net.host[1].wlan[0].queue queueingTime:histogram
+field count 301
+field mean 0.00039418917102658
+field stddev 0.0058597743599568
+field min 0
+field max 0.1
+field sum 0.118650940479
+field sqrsum 0.010347857580751
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	0	299
+bin	0.002	0
+bin	0.004	0
+bin	0.006	0
+bin	0.008	0
+bin	0.01	0
+bin	0.012	0
+bin	0.014	0
+bin	0.016	0
+bin	0.018	1
+bin	0.02	0
+bin	0.022	0
+bin	0.024	0
+bin	0.026	0
+bin	0.028	0
+bin	0.03	0
+bin	0.032	0
+bin	0.034	0
+bin	0.036	0
+bin	0.038	0
+bin	0.04	0
+bin	0.042	0
+bin	0.044	0
+bin	0.046	0
+bin	0.048	0
+bin	0.05	0
+bin	0.052	0
+bin	0.054	0
+bin	0.056	0
+bin	0.058	0
+bin	0.06	0
+bin	0.062	0
+bin	0.064	0
+bin	0.066	0
+bin	0.068	0
+bin	0.07	0
+bin	0.072	0
+bin	0.074	0
+bin	0.076	0
+bin	0.078	0
+bin	0.08	0
+bin	0.082	0
+bin	0.084	0
+bin	0.086	0
+bin	0.088	0
+bin	0.09	0
+bin	0.092	0
+bin	0.094	0
+bin	0.096	0
+bin	0.098	1
+bin	0.1	0
+bin	0.102	0
+bin	0.104	0
+bin	0.106	0
+bin	0.108	0
+bin	0.11	0
+bin	0.112	0
+bin	0.114	0
+bin	0.116	0
+bin	0.118	0
+bin	0.12	0
+bin	0.122	0
+bin	0.124	0
+bin	0.126	0
+scalar Net.host[1].wlan[0].queue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar Net.host[1].wlan[0].queue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar Net.host[1].wlan[0].queue queueLength:max 2
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net.host[1].wlan[0].queue queueLength:timeavg 0.0039550313493
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net.host[1].wlan[0].queue rcvdPk:count 301
+attr interpolationmode none
+attr title "received packets, count"
+scalar Net.host[1].wlan[0].queue rcvdPk:sum(packetBytes) 25228
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar Net.host[1].wlan[0].mac droppedPkNotForUs:count 1826
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, count"
+scalar Net.host[1].wlan[0].mac droppedPkNotForUs:sum(packetBytes) 334080
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, sum(packetBytes)"
+scalar Net.host[1].wlan[0].mac rcvdPkFromLL:count 2160
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, count"
+scalar Net.host[1].wlan[0].mac rcvdPkFromLL:sum(packetBytes) 393576
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, sum(packetBytes)"
+scalar Net.host[1].wlan[0].mac sentDownPk:count 301
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, count"
+scalar Net.host[1].wlan[0].mac sentDownPk:sum(packetBytes) 55328
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, sum(packetBytes)"
+scalar Net.host[1].wlan[0].mac rcvdPkFromHL:count 301
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar Net.host[1].wlan[0].mac rcvdPkFromHL:sum(packetBytes) 25228
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar Net.host[1].wlan[0].mac passedUpPk:count 334
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar Net.host[1].wlan[0].mac passedUpPk:sum(packetBytes) 26096
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar Net.host[1].wlan[0].radio transmissionState:count 603
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, count"
+scalar Net.host[1].wlan[0].radio receptionState:count 4324
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, count"
+scalar Net.host[1].wlan[0].radio radioMode:count 2
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, count"
+statistic Net.host[1].wlan[0].radio symbolErrorRate:histogram
+field count 2160
+field mean 0.032407407407407
+field stddev 0.17712055579093
+field min 0
+field max 1
+field sum 70
+field sqrsum 70
+attr source symbolErrorRate
+attr title "Symbol error rate, histogram"
+bin	-inf	0
+bin	0	2090
+bin	1	70
+bin	2	0
+statistic Net.host[1].wlan[0].radio bitErrorRate:histogram
+field count 2160
+field mean 0.032407407407407
+field stddev 0.17712055579093
+field min 0
+field max 1
+field sum 70
+field sqrsum 70
+attr source bitErrorRate
+attr title "Bit error rate, histogram"
+bin	-inf	0
+bin	0	2090
+bin	1	70
+bin	2	0
+statistic Net.host[1].wlan[0].radio packetErrorRate:histogram
+field count 2160
+field mean 0.032407407407407
+field stddev 0.17712055579093
+field min 0
+field max 1
+field sum 70
+field sqrsum 70
+attr source packetErrorRate
+attr title "Packet error rate, histogram"
+bin	-inf	0
+bin	0	2090
+bin	1	70
+bin	2	0
+statistic Net.host[1].wlan[0].radio minSNIR:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr source minSNIR
+attr title "Min SNIR, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net.host[1].pingApp[0] "Pings sent" 300
+scalar Net.host[1].pingApp[0] "ping loss rate (%)" 0.33333333333333
+scalar Net.host[1].pingApp[0] "ping out-of-order rate (%)" 0
+scalar Net.host[1].pingApp[0] pingRxSeq:count 299
+attr interpolationmode none
+attr title "ping rx seq, count"
+scalar Net.host[1].pingApp[0] pingTxSeq:count 300
+attr interpolationmode none
+attr title "ping tx seq, count"
+scalar Net.host[1].pingApp[0] numOutOfOrderArrivals:last -nan
+attr interpolationmode none
+attr title "ping out-of-order arrivals, last"
+scalar Net.host[1].pingApp[0] numLost:last 1
+attr interpolationmode none
+attr title "pings lost, last"
+statistic Net.host[1].pingApp[0] rtt:histogram
+field count 299
+field mean 0.0049379736367559
+field stddev 0.016741852895937
+field min 0.00157291154
+field max 0.221799370301
+field sum 1.47645411739
+field sqrsum 0.090817003747536
+attr interpolationmode none
+attr title "ping round-trip time, histogram"
+attr unit s
+bin	-inf	0
+bin	0	266
+bin	0.005	0
+bin	0.01	0
+bin	0.015	28
+bin	0.02	1
+bin	0.025	1
+bin	0.03	0
+bin	0.035	0
+bin	0.04	0
+bin	0.045	0
+bin	0.05	0
+bin	0.055	0
+bin	0.06	0
+bin	0.065	0
+bin	0.07	0
+bin	0.075	0
+bin	0.08	0
+bin	0.085	0
+bin	0.09	0
+bin	0.095	0
+bin	0.1	0
+bin	0.105	0
+bin	0.11	0
+bin	0.115	1
+bin	0.12	1
+bin	0.125	0
+bin	0.13	0
+bin	0.135	0
+bin	0.14	0
+bin	0.145	0
+bin	0.15	0
+bin	0.155	0
+bin	0.16	0
+bin	0.165	0
+bin	0.17	0
+bin	0.175	0
+bin	0.18	0
+bin	0.185	0
+bin	0.19	0
+bin	0.195	0
+bin	0.2	0
+bin	0.205	0
+bin	0.21	0
+bin	0.215	0
+bin	0.22	1
+bin	0.225	0
+bin	0.23	0
+bin	0.235	0
+bin	0.24	0
+bin	0.245	0
+bin	0.25	0
+bin	0.255	0
+bin	0.26	0
+bin	0.265	0
+bin	0.27	0
+bin	0.275	0
+bin	0.28	0
+scalar Net.host[2].networkLayer.arp failedARPResolution:count 0
+attr title "ARP failed resolutions, count"
+scalar Net.host[2].networkLayer.arp completedARPResolution:count 1
+attr title "ARP completed resolutions, count"
+scalar Net.host[2].networkLayer.arp initiatedARPResolution:count 1
+attr title "ARP initiated resolutions, count"
+scalar Net.host[2].networkLayer.arp sentReply:count 0
+attr title "ARP replies sent, count"
+scalar Net.host[2].networkLayer.arp sentReq:count 2
+attr title "ARP request sent, count"
+scalar Net.host[2].lo0.lo droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar Net.host[2].lo0.lo droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar Net.host[2].lo0.lo rcvdPkFromHL:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar Net.host[2].lo0.lo rcvdPkFromHL:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar Net.host[2].lo0.lo passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar Net.host[2].lo0.lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+statistic Net.host[2].wlan[0].queue queueingTime:histogram
+field count 302
+field mean 0.0001434491970894
+field stddev 0.00087915443791681
+field min 0
+field max 0.007876664925
+field sum 0.043321657521
+field sqrsum 0.00023886112722633
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	0	292
+bin	0.0002	0
+bin	0.0004	0
+bin	0.0006	1
+bin	0.0008	0
+bin	0.001	0
+bin	0.0012	0
+bin	0.0014	1
+bin	0.0016	0
+bin	0.0018	0
+bin	0.002	0
+bin	0.0022	1
+bin	0.0024	0
+bin	0.0026	0
+bin	0.0028	0
+bin	0.003	1
+bin	0.0032	0
+bin	0.0034	0
+bin	0.0036	0
+bin	0.0038	1
+bin	0.004	0
+bin	0.0042	0
+bin	0.0044	0
+bin	0.0046	1
+bin	0.0048	0
+bin	0.005	0
+bin	0.0052	0
+bin	0.0054	1
+bin	0.0056	0
+bin	0.0058	0
+bin	0.006	0
+bin	0.0062	1
+bin	0.0064	0
+bin	0.0066	0
+bin	0.0068	0
+bin	0.007	1
+bin	0.0072	0
+bin	0.0074	0
+bin	0.0076	0
+bin	0.0078	1
+bin	0.008	0
+bin	0.0082	0
+bin	0.0084	0
+bin	0.0086	0
+bin	0.0088	0
+bin	0.009	0
+bin	0.0092	0
+bin	0.0094	0
+bin	0.0096	0
+bin	0.0098	0
+bin	0.01	0
+scalar Net.host[2].wlan[0].queue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar Net.host[2].wlan[0].queue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar Net.host[2].wlan[0].queue queueLength:max 10
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net.host[2].wlan[0].queue queueLength:timeavg 0.0014440552507
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net.host[2].wlan[0].queue rcvdPk:count 302
+attr interpolationmode none
+attr title "received packets, count"
+scalar Net.host[2].wlan[0].queue rcvdPk:sum(packetBytes) 25256
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar Net.host[2].wlan[0].mac droppedPkNotForUs:count 1825
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, count"
+scalar Net.host[2].wlan[0].mac droppedPkNotForUs:sum(packetBytes) 334008
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, sum(packetBytes)"
+scalar Net.host[2].wlan[0].mac rcvdPkFromLL:count 2159
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, count"
+scalar Net.host[2].wlan[0].mac rcvdPkFromLL:sum(packetBytes) 393560
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, sum(packetBytes)"
+scalar Net.host[2].wlan[0].mac sentDownPk:count 302
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, count"
+scalar Net.host[2].wlan[0].mac sentDownPk:sum(packetBytes) 55456
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, sum(packetBytes)"
+scalar Net.host[2].wlan[0].mac rcvdPkFromHL:count 302
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar Net.host[2].wlan[0].mac rcvdPkFromHL:sum(packetBytes) 25256
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar Net.host[2].wlan[0].mac passedUpPk:count 334
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar Net.host[2].wlan[0].mac passedUpPk:sum(packetBytes) 26152
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar Net.host[2].wlan[0].radio transmissionState:count 605
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, count"
+scalar Net.host[2].wlan[0].radio receptionState:count 4320
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, count"
+scalar Net.host[2].wlan[0].radio radioMode:count 2
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, count"
+statistic Net.host[2].wlan[0].radio symbolErrorRate:histogram
+field count 2159
+field mean 0.031496062992126
+field stddev 0.17469458018744
+field min 0
+field max 1
+field sum 68
+field sqrsum 68
+attr source symbolErrorRate
+attr title "Symbol error rate, histogram"
+bin	-inf	0
+bin	0	2091
+bin	1	68
+bin	2	0
+statistic Net.host[2].wlan[0].radio bitErrorRate:histogram
+field count 2159
+field mean 0.031496062992126
+field stddev 0.17469458018744
+field min 0
+field max 1
+field sum 68
+field sqrsum 68
+attr source bitErrorRate
+attr title "Bit error rate, histogram"
+bin	-inf	0
+bin	0	2091
+bin	1	68
+bin	2	0
+statistic Net.host[2].wlan[0].radio packetErrorRate:histogram
+field count 2159
+field mean 0.031496062992126
+field stddev 0.17469458018744
+field min 0
+field max 1
+field sum 68
+field sqrsum 68
+attr source packetErrorRate
+attr title "Packet error rate, histogram"
+bin	-inf	0
+bin	0	2091
+bin	1	68
+bin	2	0
+statistic Net.host[2].wlan[0].radio minSNIR:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr source minSNIR
+attr title "Min SNIR, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net.host[2].pingApp[0] "Pings sent" 300
+scalar Net.host[2].pingApp[0] "ping loss rate (%)" 0
+scalar Net.host[2].pingApp[0] "ping out-of-order rate (%)" 0
+scalar Net.host[2].pingApp[0] pingRxSeq:count 300
+attr interpolationmode none
+attr title "ping rx seq, count"
+scalar Net.host[2].pingApp[0] pingTxSeq:count 300
+attr interpolationmode none
+attr title "ping tx seq, count"
+scalar Net.host[2].pingApp[0] numOutOfOrderArrivals:last -nan
+attr interpolationmode none
+attr title "ping out-of-order arrivals, last"
+scalar Net.host[2].pingApp[0] numLost:last -nan
+attr interpolationmode none
+attr title "pings lost, last"
+statistic Net.host[2].pingApp[0] rtt:histogram
+field count 300
+field mean 0.032130734194637
+field stddev 0.13953992114785
+field min 0.001574949395
+field max 1.165387685862
+field sum 9.639220258391
+field sqrsum 6.1316607125562
+attr interpolationmode none
+attr title "ping round-trip time, histogram"
+attr unit s
+bin	-inf	0
+bin	0	260
+bin	0.02	0
+bin	0.04	0
+bin	0.06	29
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	1
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	1
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	1
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	1
+bin	0.48	0
+bin	0.5	0
+bin	0.52	0
+bin	0.54	0
+bin	0.56	1
+bin	0.58	0
+bin	0.6	0
+bin	0.62	0
+bin	0.64	0
+bin	0.66	1
+bin	0.68	0
+bin	0.7	0
+bin	0.72	0
+bin	0.74	0
+bin	0.76	1
+bin	0.78	0
+bin	0.8	0
+bin	0.82	0
+bin	0.84	0
+bin	0.86	1
+bin	0.88	0
+bin	0.9	0
+bin	0.92	0
+bin	0.94	0
+bin	0.96	1
+bin	0.98	0
+bin	1	0
+bin	1.02	0
+bin	1.04	0
+bin	1.06	1
+bin	1.08	0
+bin	1.1	0
+bin	1.12	0
+bin	1.14	0
+bin	1.16	1
+bin	1.18	0
+bin	1.2	0
+bin	1.22	0
+bin	1.24	0
+bin	1.26	0
+bin	1.28	0
+bin	1.3	0
+bin	1.32	0
+bin	1.34	0
+bin	1.36	0
+bin	1.38	0
+bin	1.4	0
+bin	1.42	0
+bin	1.44	0
+bin	1.46	0
+scalar Net.host[3].networkLayer.arp failedARPResolution:count 0
+attr title "ARP failed resolutions, count"
+scalar Net.host[3].networkLayer.arp completedARPResolution:count 1
+attr title "ARP completed resolutions, count"
+scalar Net.host[3].networkLayer.arp initiatedARPResolution:count 1
+attr title "ARP initiated resolutions, count"
+scalar Net.host[3].networkLayer.arp sentReply:count 0
+attr title "ARP replies sent, count"
+scalar Net.host[3].networkLayer.arp sentReq:count 1
+attr title "ARP request sent, count"
+scalar Net.host[3].lo0.lo droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar Net.host[3].lo0.lo droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar Net.host[3].lo0.lo rcvdPkFromHL:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar Net.host[3].lo0.lo rcvdPkFromHL:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar Net.host[3].lo0.lo passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar Net.host[3].lo0.lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+statistic Net.host[3].wlan[0].queue queueingTime:histogram
+field count 301
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	301
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+scalar Net.host[3].wlan[0].queue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar Net.host[3].wlan[0].queue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar Net.host[3].wlan[0].queue queueLength:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net.host[3].wlan[0].queue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net.host[3].wlan[0].queue rcvdPk:count 301
+attr interpolationmode none
+attr title "received packets, count"
+scalar Net.host[3].wlan[0].queue rcvdPk:sum(packetBytes) 25228
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar Net.host[3].wlan[0].mac droppedPkNotForUs:count 1830
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, count"
+scalar Net.host[3].wlan[0].mac droppedPkNotForUs:sum(packetBytes) 334872
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, sum(packetBytes)"
+scalar Net.host[3].wlan[0].mac rcvdPkFromLL:count 2162
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, count"
+scalar Net.host[3].wlan[0].mac rcvdPkFromLL:sum(packetBytes) 394000
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, sum(packetBytes)"
+scalar Net.host[3].wlan[0].mac sentDownPk:count 301
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, count"
+scalar Net.host[3].wlan[0].mac sentDownPk:sum(packetBytes) 55328
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, sum(packetBytes)"
+scalar Net.host[3].wlan[0].mac rcvdPkFromHL:count 301
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar Net.host[3].wlan[0].mac rcvdPkFromHL:sum(packetBytes) 25228
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar Net.host[3].wlan[0].mac passedUpPk:count 332
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar Net.host[3].wlan[0].mac passedUpPk:sum(packetBytes) 25928
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar Net.host[3].wlan[0].radio transmissionState:count 603
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, count"
+scalar Net.host[3].wlan[0].radio receptionState:count 4327
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, count"
+scalar Net.host[3].wlan[0].radio radioMode:count 2
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, count"
+statistic Net.host[3].wlan[0].radio symbolErrorRate:histogram
+field count 2162
+field mean 0.029602220166512
+field stddev 0.16952646287435
+field min 0
+field max 1
+field sum 64
+field sqrsum 64
+attr source symbolErrorRate
+attr title "Symbol error rate, histogram"
+bin	-inf	0
+bin	0	2098
+bin	1	64
+bin	2	0
+statistic Net.host[3].wlan[0].radio bitErrorRate:histogram
+field count 2162
+field mean 0.029602220166512
+field stddev 0.16952646287435
+field min 0
+field max 1
+field sum 64
+field sqrsum 64
+attr source bitErrorRate
+attr title "Bit error rate, histogram"
+bin	-inf	0
+bin	0	2098
+bin	1	64
+bin	2	0
+statistic Net.host[3].wlan[0].radio packetErrorRate:histogram
+field count 2162
+field mean 0.029602220166512
+field stddev 0.16952646287435
+field min 0
+field max 1
+field sum 64
+field sqrsum 64
+attr source packetErrorRate
+attr title "Packet error rate, histogram"
+bin	-inf	0
+bin	0	2098
+bin	1	64
+bin	2	0
+statistic Net.host[3].wlan[0].radio minSNIR:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr source minSNIR
+attr title "Min SNIR, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net.host[3].pingApp[0] "Pings sent" 300
+scalar Net.host[3].pingApp[0] "ping loss rate (%)" 1
+scalar Net.host[3].pingApp[0] "ping out-of-order rate (%)" 0
+scalar Net.host[3].pingApp[0] pingRxSeq:count 297
+attr interpolationmode none
+attr title "ping rx seq, count"
+scalar Net.host[3].pingApp[0] pingTxSeq:count 300
+attr interpolationmode none
+attr title "ping tx seq, count"
+scalar Net.host[3].pingApp[0] numOutOfOrderArrivals:last -nan
+attr interpolationmode none
+attr title "ping out-of-order arrivals, last"
+scalar Net.host[3].pingApp[0] numLost:last 3
+attr interpolationmode none
+attr title "pings lost, last"
+statistic Net.host[3].pingApp[0] rtt:histogram
+field count 297
+field mean 0.011837556276943
+field stddev 0.030574668154478
+field min 0.001574212499
+field max 0.199279664439
+field sum 3.515754214252
+field sqrsum 0.31832179686302
+attr interpolationmode none
+attr title "ping round-trip time, histogram"
+attr unit s
+bin	-inf	0
+bin	0	265
+bin	0.005	1
+bin	0.01	0
+bin	0.015	0
+bin	0.02	0
+bin	0.025	0
+bin	0.03	0
+bin	0.035	0
+bin	0.04	0
+bin	0.045	0
+bin	0.05	0
+bin	0.055	0
+bin	0.06	0
+bin	0.065	0
+bin	0.07	0
+bin	0.075	0
+bin	0.08	0
+bin	0.085	0
+bin	0.09	0
+bin	0.095	29
+bin	0.1	1
+bin	0.105	0
+bin	0.11	0
+bin	0.115	0
+bin	0.12	0
+bin	0.125	0
+bin	0.13	0
+bin	0.135	0
+bin	0.14	0
+bin	0.145	0
+bin	0.15	0
+bin	0.155	0
+bin	0.16	0
+bin	0.165	0
+bin	0.17	0
+bin	0.175	0
+bin	0.18	0
+bin	0.185	0
+bin	0.19	0
+bin	0.195	1
+bin	0.2	0
+bin	0.205	0
+bin	0.21	0
+bin	0.215	0
+bin	0.22	0
+bin	0.225	0
+bin	0.23	0
+bin	0.235	0
+bin	0.24	0
+bin	0.245	0
+bin	0.25	0
+scalar Net.host[4].networkLayer.arp failedARPResolution:count 0
+attr title "ARP failed resolutions, count"
+scalar Net.host[4].networkLayer.arp completedARPResolution:count 1
+attr title "ARP completed resolutions, count"
+scalar Net.host[4].networkLayer.arp initiatedARPResolution:count 1
+attr title "ARP initiated resolutions, count"
+scalar Net.host[4].networkLayer.arp sentReply:count 0
+attr title "ARP replies sent, count"
+scalar Net.host[4].networkLayer.arp sentReq:count 1
+attr title "ARP request sent, count"
+scalar Net.host[4].lo0.lo droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar Net.host[4].lo0.lo droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar Net.host[4].lo0.lo rcvdPkFromHL:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar Net.host[4].lo0.lo rcvdPkFromHL:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar Net.host[4].lo0.lo passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar Net.host[4].lo0.lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+statistic Net.host[4].wlan[0].queue queueingTime:histogram
+field count 301
+field mean 2.6149518106312e-06
+field stddev 4.5367718308826e-05
+field min 0
+field max 0.000787100495
+field sum 0.000787100495
+field sqrsum 6.1952718922924e-07
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	0	300
+bin	2e-05	0
+bin	4e-05	0
+bin	6e-05	0
+bin	8e-05	0
+bin	0.0001	0
+bin	0.00012	0
+bin	0.00014	0
+bin	0.00016	0
+bin	0.00018	0
+bin	0.0002	0
+bin	0.00022	0
+bin	0.00024	0
+bin	0.00026	0
+bin	0.00028	0
+bin	0.0003	0
+bin	0.00032	0
+bin	0.00034	0
+bin	0.00036	0
+bin	0.00038	0
+bin	0.0004	0
+bin	0.00042	0
+bin	0.00044	0
+bin	0.00046	0
+bin	0.00048	0
+bin	0.0005	0
+bin	0.00052	0
+bin	0.00054	0
+bin	0.00056	0
+bin	0.00058	0
+bin	0.0006	0
+bin	0.00062	0
+bin	0.00064	0
+bin	0.00066	0
+bin	0.00068	0
+bin	0.0007	0
+bin	0.00072	0
+bin	0.00074	0
+bin	0.00076	0
+bin	0.00078	1
+bin	0.0008	0
+bin	0.00082	0
+bin	0.00084	0
+bin	0.00086	0
+bin	0.00088	0
+bin	0.0009	0
+bin	0.00092	0
+bin	0.00094	0
+bin	0.00096	0
+bin	0.00098	0
+bin	0.001	0
+scalar Net.host[4].wlan[0].queue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar Net.host[4].wlan[0].queue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar Net.host[4].wlan[0].queue queueLength:max 1
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net.host[4].wlan[0].queue queueLength:timeavg 2.6236683166667e-05
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net.host[4].wlan[0].queue rcvdPk:count 301
+attr interpolationmode none
+attr title "received packets, count"
+scalar Net.host[4].wlan[0].queue rcvdPk:sum(packetBytes) 25228
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar Net.host[4].wlan[0].mac droppedPkNotForUs:count 1826
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, count"
+scalar Net.host[4].wlan[0].mac droppedPkNotForUs:sum(packetBytes) 334136
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, sum(packetBytes)"
+scalar Net.host[4].wlan[0].mac rcvdPkFromLL:count 2160
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, count"
+scalar Net.host[4].wlan[0].mac rcvdPkFromLL:sum(packetBytes) 393632
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, sum(packetBytes)"
+scalar Net.host[4].wlan[0].mac sentDownPk:count 301
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, count"
+scalar Net.host[4].wlan[0].mac sentDownPk:sum(packetBytes) 55328
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, sum(packetBytes)"
+scalar Net.host[4].wlan[0].mac rcvdPkFromHL:count 301
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar Net.host[4].wlan[0].mac rcvdPkFromHL:sum(packetBytes) 25228
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar Net.host[4].wlan[0].mac passedUpPk:count 334
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar Net.host[4].wlan[0].mac passedUpPk:sum(packetBytes) 26096
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar Net.host[4].wlan[0].radio transmissionState:count 603
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, count"
+scalar Net.host[4].wlan[0].radio receptionState:count 4324
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, count"
+scalar Net.host[4].wlan[0].radio radioMode:count 2
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, count"
+statistic Net.host[4].wlan[0].radio symbolErrorRate:histogram
+field count 2160
+field mean 0.032407407407407
+field stddev 0.17712055579093
+field min 0
+field max 1
+field sum 70
+field sqrsum 70
+attr source symbolErrorRate
+attr title "Symbol error rate, histogram"
+bin	-inf	0
+bin	0	2090
+bin	1	70
+bin	2	0
+statistic Net.host[4].wlan[0].radio bitErrorRate:histogram
+field count 2160
+field mean 0.032407407407407
+field stddev 0.17712055579093
+field min 0
+field max 1
+field sum 70
+field sqrsum 70
+attr source bitErrorRate
+attr title "Bit error rate, histogram"
+bin	-inf	0
+bin	0	2090
+bin	1	70
+bin	2	0
+statistic Net.host[4].wlan[0].radio packetErrorRate:histogram
+field count 2160
+field mean 0.032407407407407
+field stddev 0.17712055579093
+field min 0
+field max 1
+field sum 70
+field sqrsum 70
+attr source packetErrorRate
+attr title "Packet error rate, histogram"
+bin	-inf	0
+bin	0	2090
+bin	1	70
+bin	2	0
+statistic Net.host[4].wlan[0].radio minSNIR:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr source minSNIR
+attr title "Min SNIR, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net.host[4].pingApp[0] "Pings sent" 300
+scalar Net.host[4].pingApp[0] "ping loss rate (%)" 0.33333333333333
+scalar Net.host[4].pingApp[0] "ping out-of-order rate (%)" 0
+scalar Net.host[4].pingApp[0] pingRxSeq:count 299
+attr interpolationmode none
+attr title "ping rx seq, count"
+scalar Net.host[4].pingApp[0] pingTxSeq:count 300
+attr interpolationmode none
+attr title "ping tx seq, count"
+scalar Net.host[4].pingApp[0] numOutOfOrderArrivals:last -nan
+attr interpolationmode none
+attr title "ping out-of-order arrivals, last"
+scalar Net.host[4].pingApp[0] numLost:last 1
+attr interpolationmode none
+attr title "pings lost, last"
+statistic Net.host[4].pingApp[0] rtt:histogram
+field count 299
+field mean 0.0095961138540368
+field stddev 0.030900410098049
+field min 0.001574201046
+field max 0.355610221968
+field sum 2.869238042357
+field sqrsum 0.31207446750862
+attr interpolationmode none
+attr title "ping round-trip time, histogram"
+attr unit s
+bin	-inf	0
+bin	0	266
+bin	0.005	0
+bin	0.01	0
+bin	0.015	0
+bin	0.02	0
+bin	0.025	0
+bin	0.03	0
+bin	0.035	0
+bin	0.04	0
+bin	0.045	0
+bin	0.05	0
+bin	0.055	28
+bin	0.06	1
+bin	0.065	1
+bin	0.07	0
+bin	0.075	0
+bin	0.08	0
+bin	0.085	0
+bin	0.09	0
+bin	0.095	0
+bin	0.1	0
+bin	0.105	0
+bin	0.11	0
+bin	0.115	0
+bin	0.12	0
+bin	0.125	0
+bin	0.13	0
+bin	0.135	0
+bin	0.14	0
+bin	0.145	0
+bin	0.15	0
+bin	0.155	1
+bin	0.16	0
+bin	0.165	0
+bin	0.17	0
+bin	0.175	0
+bin	0.18	0
+bin	0.185	0
+bin	0.19	0
+bin	0.195	0
+bin	0.2	0
+bin	0.205	0
+bin	0.21	0
+bin	0.215	0
+bin	0.22	0
+bin	0.225	0
+bin	0.23	0
+bin	0.235	0
+bin	0.24	0
+bin	0.245	0
+bin	0.25	0
+bin	0.255	1
+bin	0.26	0
+bin	0.265	0
+bin	0.27	0
+bin	0.275	0
+bin	0.28	0
+bin	0.285	0
+bin	0.29	0
+bin	0.295	0
+bin	0.3	0
+bin	0.305	0
+bin	0.31	0
+bin	0.315	0
+bin	0.32	0
+bin	0.325	0
+bin	0.33	0
+bin	0.335	0
+bin	0.34	0
+bin	0.345	0
+bin	0.35	0
+bin	0.355	1
+bin	0.36	0
+bin	0.365	0
+bin	0.37	0
+bin	0.375	0
+bin	0.38	0
+bin	0.385	0
+bin	0.39	0
+bin	0.395	0
+bin	0.4	0
+bin	0.405	0
+bin	0.41	0
+bin	0.415	0
+bin	0.42	0
+bin	0.425	0
+bin	0.43	0
+bin	0.435	0
+bin	0.44	0
+bin	0.445	0
+scalar Net.attackhost[0].networkLayer.arp failedARPResolution:count 9
+attr title "ARP failed resolutions, count"
+scalar Net.attackhost[0].networkLayer.arp completedARPResolution:count 0
+attr title "ARP completed resolutions, count"
+scalar Net.attackhost[0].networkLayer.arp initiatedARPResolution:count 10
+attr title "ARP initiated resolutions, count"
+scalar Net.attackhost[0].networkLayer.arp sentReply:count 0
+attr title "ARP replies sent, count"
+scalar Net.attackhost[0].networkLayer.arp sentReq:count 30
+attr title "ARP request sent, count"
+scalar Net.attackhost[0].lo0.lo droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar Net.attackhost[0].lo0.lo droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar Net.attackhost[0].lo0.lo rcvdPkFromHL:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar Net.attackhost[0].lo0.lo rcvdPkFromHL:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar Net.attackhost[0].lo0.lo passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar Net.attackhost[0].lo0.lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+statistic Net.attackhost[0].wlan[0].queue queueingTime:histogram
+field count 30
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	30
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+scalar Net.attackhost[0].wlan[0].queue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar Net.attackhost[0].wlan[0].queue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar Net.attackhost[0].wlan[0].queue queueLength:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net.attackhost[0].wlan[0].queue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net.attackhost[0].wlan[0].queue rcvdPk:count 30
+attr interpolationmode none
+attr title "received packets, count"
+scalar Net.attackhost[0].wlan[0].queue rcvdPk:sum(packetBytes) 840
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar Net.attackhost[0].wlan[0].mac droppedPkNotForUs:count 2424
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, count"
+scalar Net.attackhost[0].wlan[0].mac droppedPkNotForUs:sum(packetBytes) 444168
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, sum(packetBytes)"
+scalar Net.attackhost[0].wlan[0].mac rcvdPkFromLL:count 2459
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, count"
+scalar Net.attackhost[0].wlan[0].mac rcvdPkFromLL:sum(packetBytes) 448648
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, sum(packetBytes)"
+scalar Net.attackhost[0].wlan[0].mac sentDownPk:count 30
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, count"
+scalar Net.attackhost[0].wlan[0].mac sentDownPk:sum(packetBytes) 3840
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, sum(packetBytes)"
+scalar Net.attackhost[0].wlan[0].mac rcvdPkFromHL:count 30
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar Net.attackhost[0].wlan[0].mac rcvdPkFromHL:sum(packetBytes) 840
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar Net.attackhost[0].wlan[0].mac passedUpPk:count 35
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar Net.attackhost[0].wlan[0].mac passedUpPk:sum(packetBytes) 980
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar Net.attackhost[0].wlan[0].radio transmissionState:count 61
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, count"
+scalar Net.attackhost[0].wlan[0].radio receptionState:count 4921
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, count"
+scalar Net.attackhost[0].wlan[0].radio radioMode:count 2
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, count"
+statistic Net.attackhost[0].wlan[0].radio symbolErrorRate:histogram
+field count 2459
+field mean 0.028873525823505
+field stddev 0.16748508266587
+field min 0
+field max 1
+field sum 71
+field sqrsum 71
+attr source symbolErrorRate
+attr title "Symbol error rate, histogram"
+bin	-inf	0
+bin	0	2388
+bin	1	71
+bin	2	0
+statistic Net.attackhost[0].wlan[0].radio bitErrorRate:histogram
+field count 2459
+field mean 0.028873525823505
+field stddev 0.16748508266587
+field min 0
+field max 1
+field sum 71
+field sqrsum 71
+attr source bitErrorRate
+attr title "Bit error rate, histogram"
+bin	-inf	0
+bin	0	2388
+bin	1	71
+bin	2	0
+statistic Net.attackhost[0].wlan[0].radio packetErrorRate:histogram
+field count 2459
+field mean 0.028873525823505
+field stddev 0.16748508266587
+field min 0
+field max 1
+field sum 71
+field sqrsum 71
+attr source packetErrorRate
+attr title "Packet error rate, histogram"
+bin	-inf	0
+bin	0	2388
+bin	1	71
+bin	2	0
+statistic Net.attackhost[0].wlan[0].radio minSNIR:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr source minSNIR
+attr title "Min SNIR, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net.attackhost[0].pingApp[0] "Pings sent" 30000
+scalar Net.attackhost[0].pingApp[0] "ping loss rate (%)" 100
+scalar Net.attackhost[0].pingApp[0] "ping out-of-order rate (%)" 0
+scalar Net.attackhost[0].pingApp[0] pingRxSeq:count 0
+attr interpolationmode none
+attr title "ping rx seq, count"
+scalar Net.attackhost[0].pingApp[0] pingTxSeq:count 30000
+attr interpolationmode none
+attr title "ping tx seq, count"
+scalar Net.attackhost[0].pingApp[0] numOutOfOrderArrivals:last -nan
+attr interpolationmode none
+attr title "ping out-of-order arrivals, last"
+scalar Net.attackhost[0].pingApp[0] numLost:last -nan
+attr interpolationmode none
+attr title "pings lost, last"
+statistic Net.attackhost[0].pingApp[0] rtt:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "ping round-trip time, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net.attackhost[1].networkLayer.arp failedARPResolution:count 9
+attr title "ARP failed resolutions, count"
+scalar Net.attackhost[1].networkLayer.arp completedARPResolution:count 0
+attr title "ARP completed resolutions, count"
+scalar Net.attackhost[1].networkLayer.arp initiatedARPResolution:count 10
+attr title "ARP initiated resolutions, count"
+scalar Net.attackhost[1].networkLayer.arp sentReply:count 0
+attr title "ARP replies sent, count"
+scalar Net.attackhost[1].networkLayer.arp sentReq:count 30
+attr title "ARP request sent, count"
+scalar Net.attackhost[1].lo0.lo droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar Net.attackhost[1].lo0.lo droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar Net.attackhost[1].lo0.lo rcvdPkFromHL:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar Net.attackhost[1].lo0.lo rcvdPkFromHL:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar Net.attackhost[1].lo0.lo passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar Net.attackhost[1].lo0.lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+statistic Net.attackhost[1].wlan[0].queue queueingTime:histogram
+field count 30
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	30
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+scalar Net.attackhost[1].wlan[0].queue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar Net.attackhost[1].wlan[0].queue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar Net.attackhost[1].wlan[0].queue queueLength:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net.attackhost[1].wlan[0].queue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net.attackhost[1].wlan[0].queue rcvdPk:count 30
+attr interpolationmode none
+attr title "received packets, count"
+scalar Net.attackhost[1].wlan[0].queue rcvdPk:sum(packetBytes) 840
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar Net.attackhost[1].wlan[0].mac droppedPkNotForUs:count 2394
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, count"
+scalar Net.attackhost[1].wlan[0].mac droppedPkNotForUs:sum(packetBytes) 440328
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, sum(packetBytes)"
+scalar Net.attackhost[1].wlan[0].mac rcvdPkFromLL:count 2429
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, count"
+scalar Net.attackhost[1].wlan[0].mac rcvdPkFromLL:sum(packetBytes) 444808
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, sum(packetBytes)"
+scalar Net.attackhost[1].wlan[0].mac sentDownPk:count 30
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, count"
+scalar Net.attackhost[1].wlan[0].mac sentDownPk:sum(packetBytes) 3840
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, sum(packetBytes)"
+scalar Net.attackhost[1].wlan[0].mac rcvdPkFromHL:count 30
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar Net.attackhost[1].wlan[0].mac rcvdPkFromHL:sum(packetBytes) 840
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar Net.attackhost[1].wlan[0].mac passedUpPk:count 35
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar Net.attackhost[1].wlan[0].mac passedUpPk:sum(packetBytes) 980
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar Net.attackhost[1].wlan[0].radio transmissionState:count 61
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, count"
+scalar Net.attackhost[1].wlan[0].radio receptionState:count 4891
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, count"
+scalar Net.attackhost[1].wlan[0].radio radioMode:count 2
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, count"
+statistic Net.attackhost[1].wlan[0].radio symbolErrorRate:histogram
+field count 2429
+field mean 0.016879374228077
+field stddev 0.12884601497612
+field min 0
+field max 1
+field sum 41
+field sqrsum 41
+attr source symbolErrorRate
+attr title "Symbol error rate, histogram"
+bin	-inf	0
+bin	0	2388
+bin	1	41
+bin	2	0
+statistic Net.attackhost[1].wlan[0].radio bitErrorRate:histogram
+field count 2429
+field mean 0.016879374228077
+field stddev 0.12884601497612
+field min 0
+field max 1
+field sum 41
+field sqrsum 41
+attr source bitErrorRate
+attr title "Bit error rate, histogram"
+bin	-inf	0
+bin	0	2388
+bin	1	41
+bin	2	0
+statistic Net.attackhost[1].wlan[0].radio packetErrorRate:histogram
+field count 2429
+field mean 0.016879374228077
+field stddev 0.12884601497612
+field min 0
+field max 1
+field sum 41
+field sqrsum 41
+attr source packetErrorRate
+attr title "Packet error rate, histogram"
+bin	-inf	0
+bin	0	2388
+bin	1	41
+bin	2	0
+statistic Net.attackhost[1].wlan[0].radio minSNIR:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr source minSNIR
+attr title "Min SNIR, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net.attackhost[1].pingApp[0] "Pings sent" 30000
+scalar Net.attackhost[1].pingApp[0] "ping loss rate (%)" 100
+scalar Net.attackhost[1].pingApp[0] "ping out-of-order rate (%)" 0
+scalar Net.attackhost[1].pingApp[0] pingRxSeq:count 0
+attr interpolationmode none
+attr title "ping rx seq, count"
+scalar Net.attackhost[1].pingApp[0] pingTxSeq:count 30000
+attr interpolationmode none
+attr title "ping tx seq, count"
+scalar Net.attackhost[1].pingApp[0] numOutOfOrderArrivals:last -nan
+attr interpolationmode none
+attr title "ping out-of-order arrivals, last"
+scalar Net.attackhost[1].pingApp[0] numLost:last -nan
+attr interpolationmode none
+attr title "pings lost, last"
+statistic Net.attackhost[1].pingApp[0] rtt:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "ping round-trip time, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net.attackhost[2].networkLayer.arp failedARPResolution:count 9
+attr title "ARP failed resolutions, count"
+scalar Net.attackhost[2].networkLayer.arp completedARPResolution:count 0
+attr title "ARP completed resolutions, count"
+scalar Net.attackhost[2].networkLayer.arp initiatedARPResolution:count 10
+attr title "ARP initiated resolutions, count"
+scalar Net.attackhost[2].networkLayer.arp sentReply:count 0
+attr title "ARP replies sent, count"
+scalar Net.attackhost[2].networkLayer.arp sentReq:count 30
+attr title "ARP request sent, count"
+scalar Net.attackhost[2].lo0.lo droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar Net.attackhost[2].lo0.lo droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar Net.attackhost[2].lo0.lo rcvdPkFromHL:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar Net.attackhost[2].lo0.lo rcvdPkFromHL:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar Net.attackhost[2].lo0.lo passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar Net.attackhost[2].lo0.lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+statistic Net.attackhost[2].wlan[0].queue queueingTime:histogram
+field count 30
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	30
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+scalar Net.attackhost[2].wlan[0].queue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar Net.attackhost[2].wlan[0].queue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar Net.attackhost[2].wlan[0].queue queueLength:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net.attackhost[2].wlan[0].queue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net.attackhost[2].wlan[0].queue rcvdPk:count 30
+attr interpolationmode none
+attr title "received packets, count"
+scalar Net.attackhost[2].wlan[0].queue rcvdPk:sum(packetBytes) 840
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar Net.attackhost[2].wlan[0].mac droppedPkNotForUs:count 2424
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, count"
+scalar Net.attackhost[2].wlan[0].mac droppedPkNotForUs:sum(packetBytes) 444056
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, sum(packetBytes)"
+scalar Net.attackhost[2].wlan[0].mac rcvdPkFromLL:count 2459
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, count"
+scalar Net.attackhost[2].wlan[0].mac rcvdPkFromLL:sum(packetBytes) 448536
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, sum(packetBytes)"
+scalar Net.attackhost[2].wlan[0].mac sentDownPk:count 30
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, count"
+scalar Net.attackhost[2].wlan[0].mac sentDownPk:sum(packetBytes) 3840
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, sum(packetBytes)"
+scalar Net.attackhost[2].wlan[0].mac rcvdPkFromHL:count 30
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar Net.attackhost[2].wlan[0].mac rcvdPkFromHL:sum(packetBytes) 840
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar Net.attackhost[2].wlan[0].mac passedUpPk:count 35
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar Net.attackhost[2].wlan[0].mac passedUpPk:sum(packetBytes) 980
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar Net.attackhost[2].wlan[0].radio transmissionState:count 61
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, count"
+scalar Net.attackhost[2].wlan[0].radio receptionState:count 4923
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, count"
+scalar Net.attackhost[2].wlan[0].radio radioMode:count 2
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, count"
+statistic Net.attackhost[2].wlan[0].radio symbolErrorRate:histogram
+field count 2459
+field mean 0.028873525823505
+field stddev 0.16748508266587
+field min 0
+field max 1
+field sum 71
+field sqrsum 71
+attr source symbolErrorRate
+attr title "Symbol error rate, histogram"
+bin	-inf	0
+bin	0	2388
+bin	1	71
+bin	2	0
+statistic Net.attackhost[2].wlan[0].radio bitErrorRate:histogram
+field count 2459
+field mean 0.028873525823505
+field stddev 0.16748508266587
+field min 0
+field max 1
+field sum 71
+field sqrsum 71
+attr source bitErrorRate
+attr title "Bit error rate, histogram"
+bin	-inf	0
+bin	0	2388
+bin	1	71
+bin	2	0
+statistic Net.attackhost[2].wlan[0].radio packetErrorRate:histogram
+field count 2459
+field mean 0.028873525823505
+field stddev 0.16748508266587
+field min 0
+field max 1
+field sum 71
+field sqrsum 71
+attr source packetErrorRate
+attr title "Packet error rate, histogram"
+bin	-inf	0
+bin	0	2388
+bin	1	71
+bin	2	0
+statistic Net.attackhost[2].wlan[0].radio minSNIR:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr source minSNIR
+attr title "Min SNIR, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net.attackhost[2].pingApp[0] "Pings sent" 30000
+scalar Net.attackhost[2].pingApp[0] "ping loss rate (%)" 100
+scalar Net.attackhost[2].pingApp[0] "ping out-of-order rate (%)" 0
+scalar Net.attackhost[2].pingApp[0] pingRxSeq:count 0
+attr interpolationmode none
+attr title "ping rx seq, count"
+scalar Net.attackhost[2].pingApp[0] pingTxSeq:count 30000
+attr interpolationmode none
+attr title "ping tx seq, count"
+scalar Net.attackhost[2].pingApp[0] numOutOfOrderArrivals:last -nan
+attr interpolationmode none
+attr title "ping out-of-order arrivals, last"
+scalar Net.attackhost[2].pingApp[0] numLost:last -nan
+attr interpolationmode none
+attr title "pings lost, last"
+statistic Net.attackhost[2].pingApp[0] rtt:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "ping round-trip time, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net.attackhost[3].networkLayer.arp failedARPResolution:count 9
+attr title "ARP failed resolutions, count"
+scalar Net.attackhost[3].networkLayer.arp completedARPResolution:count 0
+attr title "ARP completed resolutions, count"
+scalar Net.attackhost[3].networkLayer.arp initiatedARPResolution:count 10
+attr title "ARP initiated resolutions, count"
+scalar Net.attackhost[3].networkLayer.arp sentReply:count 0
+attr title "ARP replies sent, count"
+scalar Net.attackhost[3].networkLayer.arp sentReq:count 30
+attr title "ARP request sent, count"
+scalar Net.attackhost[3].lo0.lo droppedPkBitError:count 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, count"
+scalar Net.attackhost[3].lo0.lo droppedPkBitError:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkBitError
+attr title "packets dropped/bit error, sum(packetBytes)"
+scalar Net.attackhost[3].lo0.lo rcvdPkFromHL:count 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar Net.attackhost[3].lo0.lo rcvdPkFromHL:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar Net.attackhost[3].lo0.lo passedUpPk:count 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar Net.attackhost[3].lo0.lo passedUpPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+statistic Net.attackhost[3].wlan[0].queue queueingTime:histogram
+field count 30
+field mean 0
+field stddev 0
+field min 0
+field max 0
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "queueing time, histogram"
+bin	-inf	0
+bin	-0.5	0
+bin	-0.48	0
+bin	-0.46	0
+bin	-0.44	0
+bin	-0.42	0
+bin	-0.4	0
+bin	-0.38	0
+bin	-0.36	0
+bin	-0.34	0
+bin	-0.32	0
+bin	-0.3	0
+bin	-0.28	0
+bin	-0.26	0
+bin	-0.24	0
+bin	-0.22	0
+bin	-0.2	0
+bin	-0.18	0
+bin	-0.16	0
+bin	-0.14	0
+bin	-0.12	0
+bin	-0.1	0
+bin	-0.08	0
+bin	-0.06	0
+bin	-0.04	0
+bin	-0.02	0
+bin	0	30
+bin	0.02	0
+bin	0.04	0
+bin	0.06	0
+bin	0.08	0
+bin	0.1	0
+bin	0.12	0
+bin	0.14	0
+bin	0.16	0
+bin	0.18	0
+bin	0.2	0
+bin	0.22	0
+bin	0.24	0
+bin	0.26	0
+bin	0.28	0
+bin	0.3	0
+bin	0.32	0
+bin	0.34	0
+bin	0.36	0
+bin	0.38	0
+bin	0.4	0
+bin	0.42	0
+bin	0.44	0
+bin	0.46	0
+bin	0.48	0
+bin	0.5	0
+scalar Net.attackhost[3].wlan[0].queue dropPk:count 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, count"
+scalar Net.attackhost[3].wlan[0].queue dropPk:sum(packetBytes) 0
+attr interpolationmode none
+attr source dropPkByQueue
+attr title "dropped packets, sum(packetBytes)"
+scalar Net.attackhost[3].wlan[0].queue queueLength:max 0
+attr interpolationmode sample-hold
+attr title "queue length, max"
+scalar Net.attackhost[3].wlan[0].queue queueLength:timeavg 0
+attr interpolationmode sample-hold
+attr title "queue length, timeavg"
+scalar Net.attackhost[3].wlan[0].queue rcvdPk:count 30
+attr interpolationmode none
+attr title "received packets, count"
+scalar Net.attackhost[3].wlan[0].queue rcvdPk:sum(packetBytes) 840
+attr interpolationmode none
+attr title "received packets, sum(packetBytes)"
+scalar Net.attackhost[3].wlan[0].mac droppedPkNotForUs:count 2424
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, count"
+scalar Net.attackhost[3].wlan[0].mac droppedPkNotForUs:sum(packetBytes) 444168
+attr interpolationmode none
+attr source dropPkNotForUs
+attr title "packets dropped/not for us, sum(packetBytes)"
+scalar Net.attackhost[3].wlan[0].mac rcvdPkFromLL:count 2459
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, count"
+scalar Net.attackhost[3].wlan[0].mac rcvdPkFromLL:sum(packetBytes) 448648
+attr interpolationmode none
+attr source packetReceivedFromLower
+attr title "packets received from lower layer, sum(packetBytes)"
+scalar Net.attackhost[3].wlan[0].mac sentDownPk:count 30
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, count"
+scalar Net.attackhost[3].wlan[0].mac sentDownPk:sum(packetBytes) 3840
+attr interpolationmode none
+attr source packetSentToLower
+attr title "packets sent to lower layer, sum(packetBytes)"
+scalar Net.attackhost[3].wlan[0].mac rcvdPkFromHL:count 30
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, count"
+scalar Net.attackhost[3].wlan[0].mac rcvdPkFromHL:sum(packetBytes) 840
+attr interpolationmode none
+attr source packetReceivedFromUpper
+attr title "packets received from higher layer, sum(packetBytes)"
+scalar Net.attackhost[3].wlan[0].mac passedUpPk:count 35
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, count"
+scalar Net.attackhost[3].wlan[0].mac passedUpPk:sum(packetBytes) 980
+attr interpolationmode none
+attr source packetSentToUpper
+attr title "packets passed to higher layer, sum(packetBytes)"
+scalar Net.attackhost[3].wlan[0].radio transmissionState:count 61
+attr interpolationmode sample-hold
+attr source transmissionStateChanged
+attr title "Radio transmission state, count"
+scalar Net.attackhost[3].wlan[0].radio receptionState:count 4921
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, count"
+scalar Net.attackhost[3].wlan[0].radio radioMode:count 2
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, count"
+statistic Net.attackhost[3].wlan[0].radio symbolErrorRate:histogram
+field count 2459
+field mean 0.028873525823505
+field stddev 0.16748508266587
+field min 0
+field max 1
+field sum 71
+field sqrsum 71
+attr source symbolErrorRate
+attr title "Symbol error rate, histogram"
+bin	-inf	0
+bin	0	2388
+bin	1	71
+bin	2	0
+statistic Net.attackhost[3].wlan[0].radio bitErrorRate:histogram
+field count 2459
+field mean 0.028873525823505
+field stddev 0.16748508266587
+field min 0
+field max 1
+field sum 71
+field sqrsum 71
+attr source bitErrorRate
+attr title "Bit error rate, histogram"
+bin	-inf	0
+bin	0	2388
+bin	1	71
+bin	2	0
+statistic Net.attackhost[3].wlan[0].radio packetErrorRate:histogram
+field count 2459
+field mean 0.028873525823505
+field stddev 0.16748508266587
+field min 0
+field max 1
+field sum 71
+field sqrsum 71
+attr source packetErrorRate
+attr title "Packet error rate, histogram"
+bin	-inf	0
+bin	0	2388
+bin	1	71
+bin	2	0
+statistic Net.attackhost[3].wlan[0].radio minSNIR:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr source minSNIR
+attr title "Min SNIR, histogram"
+bin	-inf	0
+bin	0	0
+bin	1	0
+scalar Net.attackhost[3].pingApp[0] "Pings sent" 30000
+scalar Net.attackhost[3].pingApp[0] "ping loss rate (%)" 100
+scalar Net.attackhost[3].pingApp[0] "ping out-of-order rate (%)" 0
+scalar Net.attackhost[3].pingApp[0] pingRxSeq:count 0
+attr interpolationmode none
+attr title "ping rx seq, count"
+scalar Net.attackhost[3].pingApp[0] pingTxSeq:count 30000
+attr interpolationmode none
+attr title "ping tx seq, count"
+scalar Net.attackhost[3].pingApp[0] numOutOfOrderArrivals:last -nan
+attr interpolationmode none
+attr title "ping out-of-order arrivals, last"
+scalar Net.attackhost[3].pingApp[0] numLost:last -nan
+attr interpolationmode none
+attr title "pings lost, last"
+statistic Net.attackhost[3].pingApp[0] rtt:histogram
+field count 0
+field mean -nan
+field stddev -nan
+field min -nan
+field max -nan
+field sum 0
+field sqrsum 0
+attr interpolationmode none
+attr title "ping round-trip time, histogram"
+attr unit s
+bin	-inf	0
+bin	0	0
+bin	1	0
+
